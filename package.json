@@ -19,7 +19,9 @@
       "prod": "marmalade-productions.co.uk"
     }
   },
-  "pre-commit": ["test"],
+  "pre-commit": [
+    "test"
+  ],
   "scripts": {
     "test": "standard",
     "start": "npm run watch",
@@ -47,8 +49,9 @@
     "postcss-import": "^7.1.3"
   },
   "devDependencies": {
-    "pre-commit": "^1.1.2",
-    "watchify": "^3.4.0",
     "browser-sync": "^2.11.1",
+    "pre-commit": "^1.1.2",
+    "standard": "^6.0.7",
+    "watchify": "^3.4.0"
   }
 }

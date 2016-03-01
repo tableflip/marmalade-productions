@@ -9,11 +9,11 @@ var mkdirp = require('mkdirp')
 var inputDir = path.join(__dirname, 'pages')
 var outputDir = path.join(__dirname, 'dist')
 
-find.file(/\index.jade$/, inputDir, function(files) {
+find.file(/\index.jade$/, inputDir, (files) => {
   var tasks = files.map(tpl => {
     var name = path.dirname(path.relative(inputDir, tpl))
     return {
-      name : name,
+      name: name,
       input: tpl,
       output: path.join(outputDir, name, 'index.html'),
       content: path.join(path.dirname(tpl), 'content.json')
