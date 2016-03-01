@@ -10,7 +10,7 @@ var inputDir = path.join(__dirname, 'pages')
 var outputDir = path.join(__dirname, 'dist')
 
 find.file(/\index.jade$/, inputDir, (files) => {
-  var tasks = files.map(tpl => {
+  var tasks = files.map((tpl) => {
     var name = path.dirname(path.relative(inputDir, tpl))
     return {
       name: name,
@@ -26,8 +26,8 @@ find.file(/\index.jade$/, inputDir, (files) => {
   })
 
   // shift output of home
-  tasks.filter(task => task.name === 'home')
-    .forEach(task => { task.output = path.join(outputDir, 'index.html') })
+  tasks.filter((task) => task.name === 'home')
+    .forEach((task) => { task.output = path.join(outputDir, 'index.html') })
 
   async.each(tasks, (task, done) => {
     console.log('build.js: Writing ' + path.relative(__dirname, task.output))

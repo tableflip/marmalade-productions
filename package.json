@@ -30,9 +30,9 @@
     "clean": "rm -rf ./dist/*;",
     "build:static": "rsync -a public dist",
     "build:html": "node build.js",
-    "build:css": "postcss --local-plugins --use postcss-import --use autoprefixer pages/main.css -o dist/bundle.css",
+    "build:css": "node-sass --include-path node_modules pages/main.scss | postcss --local-plugins --use autoprefixer --output dist/bundle.css",
     "watch:html": "nodemon -w pages -e jade -x npm run build:html",
-    "watch:css": "nodemon -w pages -e css -x npm run build:css",
+    "watch:css": "nodemon -w pages -e scss -x npm run build:css",
     "watch:static": "nodemon -w public -e 'gif,png,webm,jpg' -x npm run build:static",
     "watch:serve": "browser-sync start --files 'dist/bundle.css' --files 'dist/*.html' --server dist",
     "deploy:next": "npm-run-all clean build && surge -p ./dist -d $npm_package_config_deploy_next",
@@ -40,16 +40,18 @@
   },
   "dependencies": {
     "autoprefixer": "^6.0.3",
+    "bootstrap": "^4.0.0-alpha.2",
     "browserify": "^11.2.0",
     "jade": "^1.11.0",
     "jadeify": "^4.4.0",
     "npm-run-all": "^1.2.11",
     "postcss": "^5.0.9",
-    "postcss-cli": "^2.3.2",
+    "postcss-cli": "^2.5.1",
     "postcss-import": "^7.1.3"
   },
   "devDependencies": {
     "browser-sync": "^2.11.1",
+    "node-sass": "^3.4.2",
     "pre-commit": "^1.1.2",
     "standard": "^6.0.7",
     "watchify": "^3.4.0"
