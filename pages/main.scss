@@ -1,3 +1,11 @@
+/*
+ * main.scss - pull it all together
+ * The build process adds custom sass vars from facts.json first.
+ * Then we add our boostrap variable overrides from the local "variables.scss"
+ * Then we add all the wonders of bootstrap.
+ * Then we import any page specific styles and add global tweaks as required.
+ */
+
 // override boostrap with our custom vars
 @import 'variables';
 @import 'bootstrap/scss/bootstrap';

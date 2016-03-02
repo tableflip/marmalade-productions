@@ -1,3 +1,11 @@
+// Bootstap v4 Variables
+
+// Things we've overridden
+$enable-rounded: false !default;
+$brand-primary: #F4E17B !default;
+
+// The rest of the defaults for your reference...
+
 // Variables
 //
 // Copy settings from this file into the provided `_custom.scss` to override
@@ -32,7 +40,7 @@ $gray-light:                #818a91 !default;
 $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;
 
-$brand-primary:             #F4E17B !default;
+$brand-primary:             #0275d8 !default;
 $brand-success:             #5cb85c !default;
 $brand-info:                #5bc0de !default;
 $brand-warning:             #f0ad4e !default;

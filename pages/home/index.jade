@@ -6,6 +6,6 @@ html(lang='en')
   body
     .navbar.navbar-light.bg-primary
       .navbar-brand marmalade
-    .jumbotron
+    .jumbotron.p-b-3.bg-inverse(style="background: url(#{content.jumbotronBg}); background-size:cover; min-height:400px;")
       h1.display-1=content.jumbotronH1
-      p.lead Play now
+      p.lead=content.jumbotronLead

@@ -6,8 +6,8 @@ var jade = require('jade')
 var async = require('async')
 var mkdirp = require('mkdirp')
 
-var inputDir = path.join(__dirname, 'pages')
-var outputDir = path.join(__dirname, 'dist')
+var inputDir = path.normalize(path.join(__dirname, '..', 'pages'))
+var outputDir = path.normalize(path.join(__dirname, '..', 'dist'))
 
 find.file(/\index.jade$/, inputDir, (files) => {
   var tasks = files.map((tpl) => {
@@ -30,12 +30,11 @@ find.file(/\index.jade$/, inputDir, (files) => {
     .forEach((task) => { task.output = path.join(outputDir, 'index.html') })
 
   async.each(tasks, (task, done) => {
-    console.log('build.js: Writing ' + path.relative(__dirname, task.output))
     mkdirp(path.dirname(task.output), () => {
       fs.writeFile(task.output, task.html, {encoding: 'utf8'}, done)
     })
   }, (err) => {
     if (err) return console.error('build.js: ', err)
-    console.log('build.js: Compiled %s templates to dist in %sms', tasks.length, Date.now() - start)
+    console.log('Compiled %s templates in %sms', tasks.length, Date.now() - start)
   })
 })
