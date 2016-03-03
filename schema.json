@@ -1,0 +1,8 @@
+{
+  "brandName": {
+    "type": "text"
+  },
+  "$brand-primary": {
+    "type": "color"
+  }
+}

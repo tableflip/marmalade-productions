@@ -1,8 +1,4 @@
 {
-  "pageTile": {
-    "type": "text"
-  },
-  "h1": {
-    "type": "text"
-  }
+  "pageTile": "About - Marmalade Productions",
+  "h1": "About us"
 }

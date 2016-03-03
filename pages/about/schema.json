@@ -1,1 +1,8 @@
-{}
+{
+  "pageTile": {
+    "type": "text"
+  },
+  "h1": {
+    "type": "text"
+  }
+}
