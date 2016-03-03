@@ -1,7 +1,4 @@
 {
-  "pageTitle": {
-    "type": "text"
-  },
   "jumbotronH1": {
     "type": "text",
     "validation": {
