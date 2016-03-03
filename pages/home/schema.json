@@ -1,0 +1,17 @@
+{
+  "pageTitle": {
+    "type": "text"
+  },
+  "jumbotronH1": {
+    "type": "text",
+    "validation": {
+      "max": 65
+    }
+  },
+  "jumbotronLead": {
+    "type": "textarea"
+  },
+  "jumbotronBg": {
+    "type": "img"
+  }
+}
