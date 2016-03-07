@@ -16,18 +16,28 @@ find.file(/\index.jade$/, inputDir, (files) => {
       name: name,
       input: tpl,
       output: path.join(outputDir, name, 'index.html'),
-      content: path.join(path.dirname(tpl), 'content.json')
+      content: path.join(path.dirname(tpl), 'content.json'),
+      meta: { relativePathToRoot: '..' }
     }
   })
 
+  // shift output of home
+  tasks
+    .filter((task) => task.name === 'home')
+    .forEach((task) => {
+      task.output = path.join(outputDir, 'index.html')
+      task.meta.relativePathToRoot = '.'
+    })
+
   tasks.forEach((task) => {
-    var locals = { content: require(task.content), pretty: true }
+    var locals = {
+      meta: task.meta,
+      content: require(task.content),
+      facts: require('../facts.json'),
+      pretty: true
+    }
     task.html = jade.renderFile(task.input, locals)
   })
-
-  // shift output of home
-  tasks.filter((task) => task.name === 'home')
-    .forEach((task) => { task.output = path.join(outputDir, 'index.html') })
 
   async.each(tasks, (task, done) => {
     mkdirp(path.dirname(task.output), () => {
