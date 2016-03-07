@@ -13,11 +13,12 @@ var base = path.normalize(path.join(__dirname, '..'))
 var input = path.join(base, 'pages', 'main.scss')
 var output = path.join(base, 'dist', 'bundle.css')
 var facts = require('../facts.json')
+var keys = ['brand-primary']
 
 // pluck sass vars from facts and turn into a sass string
 var sassVars = Object.keys(facts)
-  .filter((k) => k.indexOf('$') === 0)
-  .map((k) => `${k}: ${facts[k]};`)
+  .filter((k) => keys.indexOf(k) > -1)
+  .map((k) => `$${k}: ${facts[k]};`)
   .join(' ')
 
 // sync yolo.
