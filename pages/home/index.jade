@@ -14,7 +14,7 @@ html(lang='en')
       p.lead=content.jumbotronLead
     
     section.about.p-y-2
-      h1.text-uppercase.p-b-1=content.aboutH1
+      h1.text-uppercase=content.aboutH1
       p.display-1.font-feature.m-b-0=content.aboutLead
       hr
       p=content.aboutCopy
@@ -25,11 +25,12 @@ html(lang='en')
     section.social.bg-primary.p-y-3
       h1.text-uppercase.p-b-1=content.socialH1
       hr
-      .p-y-1
-        &nbsp;
       a(href=content.socialLinkTarget)
         +icon('twitter-button')   
         span=content.socialLink
+    
+    section.clients.p-y-3
+      h1.text-uppercase.p-b-1=content.clientsH1
       
       
     include ../bundle.svg

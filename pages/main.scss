@@ -25,21 +25,10 @@ body {
   text-align:center;
   font-weight:500;
 }
-
 hr {
-  display: block;
-  margin: 0;
-  border: 0 none;
-  height: auto;
-}
-hr::after {
-  display: inline-block;
-  font-family: $font-family-serif;
-  content: '…';
-  text-align: center;
-  font-size: 2.6rem;
-  line-height: 2.6rem;
-  vertical-align: 1.5rem;
+  height: 8px;
+  border: 0;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAICAYAAAB+rDbrAAAABGdBTUEAALGPC/xhBQAAANRJREFUOBFjYIAAGSC1DIifQTGIDRIjBJiACoqA+CIQfwLiY0AcCMTEAGOgop1A/A6IbwNxPxDzADEYgCx/C8T/0TBIjJDDFqPpgZlRABTHBxyBkr+BGKYeRp8HirGBNIJCBSaIToPkcAEHoAS6ehj/O1BOFJdGoPhNPHqLQfqe4VEAksMF6oESMEdgo31waJQkoG8TKE0MOgBy1AE8rsIndxCPvh9AuZM45J8DxW/hkAMJg80dlAkd5DqQw0CJGpSGQBjEJpTzgEoY0IuE40AxiosEAJkua9jdzBC9AAAAAElFTkSuQmCC') no-repeat top center;
 }
 .display-1 {
   letter-spacing: -2px;
@@ -72,4 +61,3 @@ hr::after {
 .font-feature {
   font-family: $font-family-serif;
 }
-

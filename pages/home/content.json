@@ -10,5 +10,8 @@
   "aboutLinkTarget": "#team",
   "socialH1": "Latest tweet",
   "socialLink": "Follow us",
-  "socialLinkTarget": "https://twitter.com/i/notifications"
+  "socialLinkTarget": "https://twitter.com/i/notifications",
+  "clientsH1": "Our Clients",
+  "clientsLink": "Full List of Clients",
+  "clientsLinkTarget": "#clients"
 }
