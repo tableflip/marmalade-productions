@@ -10,6 +10,15 @@ html(lang='en')
       .navbar-brand
         +svg('marmalade-logo')
     .jumbotron.p-b-3.bg-inverse(style="background: url(#{content.jumbotronBg}); background-size:cover; min-height:400px;")
-      h1.display-1=content.jumbotronH1
+      h1.font-feature=content.jumbotronH1
       p.lead=content.jumbotronLead
+    section.about
+      h1=content.aboutH1
+      p.lead=content.aboutLead
+      hr
+      p=content.aboutCopy
+      p
+        a(href=content.aboutLinkTarget)=content.aboutLink
+          +icon('down-arrow-grey')
+      
     include ../bundle.svg
