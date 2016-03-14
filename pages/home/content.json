@@ -7,5 +7,8 @@
   "aboutLead": "We're an independent film production company based in London.",
   "aboutCopy": "We produce high quality film and video content for a variety of high end clients and independent organisations, from brand and product footage, to interviews and documentaries.",
   "aboutLink": "Meet the team",
-  "aboutLinkTarget": "#team"
+  "aboutLinkTarget": "#team",
+  "socialH1": "Latest tweet",
+  "socialLink": "Follow us",
+  "socialLinkTarget": "https://twitter.com/i/notifications"
 }
