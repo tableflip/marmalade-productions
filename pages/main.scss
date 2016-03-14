@@ -16,3 +16,23 @@ body {
   color: #222;
   text-align:center;
 }
+
+.svg-icon {
+  vertical-align: middle;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  svg {
+    fill: currentColor;
+    stroke: white;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.navbar-brand {
+  svg {
+    width: 141px;
+    height: 30px;
+  }
+}
