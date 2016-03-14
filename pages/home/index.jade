@@ -1,11 +1,15 @@
+include ../icon.jade
+
 doctype html
 html(lang='en')
   head
     include ../head.jade
     title=content.pageTitle
-  body
+  body.page-home
     .navbar.navbar-light.bg-primary
-      .navbar-brand marmalade
+      .navbar-brand
+        +svg('marmalade-logo')
     .jumbotron.p-b-3.bg-inverse(style="background: url(#{content.jumbotronBg}); background-size:cover; min-height:400px;")
       h1.display-1=content.jumbotronH1
       p.lead=content.jumbotronLead
+    include ../bundle.svg
