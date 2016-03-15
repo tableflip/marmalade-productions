@@ -21,8 +21,12 @@
   "theteamEmail": "email Sherlock",
   "theteamEmailLink": "sherlock@bakerstreet.gov",
   "theteamPhone": "0799786772",
-  "servicesH1": "Servies: The Brief",
-  "servicesCopy": "We'll work with you closely to fully understand your project requirements, from what you want to communicate to the style in which you'd like to do it. We'll then come up with a proposal, budget and time-frame that works for you.",
+  "servicesH1": "Services",
+  "servicesCarousel": [
+    "The Brief|We'll work with you closely to fully understand your project requirements, from what you want to communicate to the style in which you'd like to do it. We'll then come up with a proposal, budget and time-frame that works for you.",
+    "The Shoot|Once we have agreed on the details of your brief we will start to shoot your film.",
+    "The Product|We will invite you to view the final edits. You can take your film away as a DVD we can also advise on distribution."
+  ],
   "contactH1": "Contact Us",
   "contactAddress": "Maramlade Productions, Unit 1a JAILmake, East Dulwich Road, London. SE22 9BA",
   "contactEmail": "email us",
