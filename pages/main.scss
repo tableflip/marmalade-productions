@@ -97,7 +97,7 @@ section p {
       .carousel-item {
         height: 300px;
         background-repeat: no-repeat;
-        background-size: 100% auto;
+        background-size: 70% auto;
         background-position: center center;
       }
       .carousel-control.left, .carousel-control.right {
@@ -106,8 +106,9 @@ section p {
       .carousel-icons {
         position: absolute;
         top: 135px;
-        left: 0;
       }
+      .left .carousel-icons { left: 0; }
+      .right .carousel-icons { right: 0; }
     }
   }
   .services {
