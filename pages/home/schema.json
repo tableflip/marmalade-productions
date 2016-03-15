@@ -10,3 +10,15 @@
   "aboutLead": { "type": "textarea" },
   "aboutCopy": { "type": "textarea" }
 }
+{
+  "jumbotronBg": { "type": "img" },
+  "aboutLead": { "type": "textarea" },
+  "aboutCopy": { "type": "textarea" },
+  "clientsCarousel": { "type": "list" },
+  "clientsFullList": { "type": "textarea" },
+  "theteamMugshot": { "type": "img" },
+  "theteamCopy": { "type": "textarea" },
+  "servicesCopy": { "type": "textarea" },
+  "contactAddress": { "type": "textarea" },
+  "contactLocation": { "type": "map" }
+}
