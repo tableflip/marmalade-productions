@@ -26,6 +26,10 @@ html(lang='en')
     section.social.bg-primary.p-y-3.p-x-1
       h1.text-uppercase.p-b-1=content.socialH1
       hr
+      article.m-y-1
+        a.twitter-timeline(href='https://twitter.com/_bmordan' data-widget-id='709856449963421696' data-tweet-limit='1' data-chrome='noheader nofooter noborders noscrollbar')
+        script.
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
       a(href=content.socialLinkTarget)
         +icon('twitter-button')   
         span=content.socialLink
