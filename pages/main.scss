@@ -9,6 +9,9 @@
 // override boostrap with our custom vars
 // See `node_modules/bootstrap/scss/_variables.scss` for more options
 $brand-primary: #F4E17B !default;
+$brand-accent: #DAE0CC;
+$brand-gray: #2E343F;
+$brand-gray-light: #C6B877;
 $enable-rounded: false;
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 $font-family-serif: 'Austin Roman', Georgia, "Times New Roman", Times, serif;
@@ -30,6 +33,10 @@ hr {
   border: 0;
   background: url('data:image/svg+xml;uft8,<svg width="37" height="8" viewBox="0 0 37 8" xmlns="http://www.w3.org/2000/svg"><title>Group</title><g fill-rule="evenodd"><ellipse cx="4" cy="4" rx="4" ry="4"/><ellipse cx="18.4" cy="4" rx="4" ry="4"/><ellipse cx="32.8" cy="4" rx="4" ry="4"/></g></svg>') no-repeat top center;
 }
+// section p {
+//   max-width: 789px;
+//   margin: auto;
+// }
 .display-1 {
   letter-spacing: -2px;
 }
@@ -38,6 +45,15 @@ hr {
   a {
     color: $body-color !important;
   }
+}
+.bg-accent {
+  background-color: $brand-accent;
+  a {
+    color: $body-color !important;
+  }
+}
+.fill-white {
+  fill: white;
 }
 .svg-icon {
   vertical-align: middle;
@@ -60,4 +76,29 @@ hr {
 
 .font-feature {
   font-family: $font-family-serif;
+}
+
+.page-home {
+  .jumbotron {
+    h1 {
+      padding-top: 4rem;
+      font-weight: 900;
+      font-size: 4rem;
+    }
+    hr {
+      color: white;
+    }
+  }
+  .services {
+    #brief {
+      width: 109px;
+      height: auto;
+      margin: auto;
+    }
+  }
+  .contact {
+    .list-group-horizontal {
+      width: 8.5rem;
+    }
+  }
 }
