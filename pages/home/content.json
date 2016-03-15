@@ -12,6 +12,13 @@
   "socialLink": "Follow us",
   "socialLinkTarget": "https://twitter.com/i/notifications",
   "clientsH1": "Our Clients",
+  "clientsCarousel": [
+    "http://www.wired.com/wp-content/uploads/2015/09/691847main_nasa_logo_987x815.jpg",
+    "http://indy100.independent.co.uk/image/29187-oh8bhm.jpg",
+    "http://vertassets.blob.core.windows.net/image/5121a742/5121a742-cf54-4ed5-965b-62e46ad2e042/starbucks_logo.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Ikea_logo.svg/1000px-Ikea_logo.svg.png"
+  ],
+  "clientsFullList": "Nasa, FedEx, Starbucks, Ikea, and many more ...",
   "clientsLink": "Full List of Clients",
   "clientsLinkTarget": "#clients",
   "theteamH1": "Meet the Team",
