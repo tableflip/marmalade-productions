@@ -5,10 +5,8 @@
       "max": 65
     }
   },
-  "jumbotronLead": {
-    "type": "textarea"
-  },
-  "jumbotronBg": {
-    "type": "img"
-  }
+  "jumbotronLead": { "type": "textarea" },
+  "jumbotronBg": { "type": "img" },
+  "aboutLead": { "type": "textarea" },
+  "aboutCopy": { "type": "textarea" }
 }

@@ -1,8 +1,8 @@
 {
   "pageTitle": "Marmalade productions",
   "jumbotronH1": "Showreel",
-  "jumbotronLead": "Play",
-  "jumbotronBg": "http://funny-cat.pics/uploads/taco_space_cat_609487887.jpg",
+  "jumbotronLead": "Play now",
+  "jumbotronBg": "https://i.vimeocdn.com/video/126338167_1280x720.jpg",
   "aboutH1": "About Marmalade",
   "aboutLead": "We're an independent film production company based in London.",
   "aboutCopy": "We produce high quality film and video content for a variety of high end clients and independent organisations, from brand and product footage, to interviews and documentaries.",
@@ -13,5 +13,20 @@
   "socialLinkTarget": "https://twitter.com/i/notifications",
   "clientsH1": "Our Clients",
   "clientsLink": "Full List of Clients",
-  "clientsLinkTarget": "#clients"
+  "clientsLinkTarget": "#clients",
+  "theteamH1": "Meet the Team",
+  "theteamMugshot": "http://static2.stuff.co.nz/1402955351/725/10166725.jpg",
+  "theteamName": "Sherlock Holmes",
+  "theteamCopy": "Crime Solving Partner - maverick investigator, violinest.",
+  "theteamEmail": "email Sherlock",
+  "theteamEmailLink": "sherlock@bakerstreet.gov",
+  "theteamPhone": "0799786772",
+  "servicesH1": "Servies: The Brief",
+  "servicesCopy": "We'll work with you closely to fully understand your project requirements, from what you want to communicate to the style in which you'd like to do it. We'll then come up with a proposal, budget and time-frame that works for you.",
+  "contactH1": "Contact Us",
+  "contactAddress": "Maramlade Productions, Unit 1a JAILmake, East Dulwich Road, London. SE22 9BA",
+  "contactEmail": "email us",
+  "contactEmailLink": "film@marmalade-productions.com",
+  "contactPhone": "02067883673",
+  "contactLocation": [0.09, 51.595]
 }
