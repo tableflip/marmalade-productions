@@ -66,7 +66,9 @@ html(lang='en')
               a(href='mailto:#{content.contactEmailLink}')=content.contactEmail
             p=content.contactPhone
           .col-sm-5
-            img.img-fluid(src='https://cloud.githubusercontent.com/assets/4499581/13774670/1ca07d7e-ea98-11e5-9533-2c9676f7a0bd.jpg')
+            -var lnglat = content.contactLocation.split(',')
+            -var mapuri = "https://maps.googleapis.com/maps/api/staticmap?center=51.4603873,-0.0698246&zoom=15&size=400x200&scale=2&maptype=roadmap&markers=color:0xF4E17B%7Cmarkers=size:mid%7C"+lnglat[0]+","+lnglat[1]+"&key=AIzaSyAGfaHukFFe0Mq0SUsfenwBMU9frvLZiyk"
+            img.img-fluid(src=mapuri)
         .row.p-y-1
           .col-xs-12
             ul.list-inline
