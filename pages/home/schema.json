@@ -8,9 +8,7 @@
   "jumbotronLead": { "type": "textarea" },
   "jumbotronBg": { "type": "img" },
   "aboutLead": { "type": "textarea" },
-  "aboutCopy": { "type": "textarea" }
-}
-{
+  "aboutCopy": { "type": "textarea" },
   "jumbotronBg": { "type": "img" },
   "aboutLead": { "type": "textarea" },
   "aboutCopy": { "type": "textarea" },
