@@ -33,10 +33,6 @@ hr {
   border: 0;
   background: url('data:image/svg+xml;uft8,<svg width="37" height="8" viewBox="0 0 37 8" xmlns="http://www.w3.org/2000/svg"><title>Group</title><g fill-rule="evenodd"><ellipse cx="4" cy="4" rx="4" ry="4"/><ellipse cx="18.4" cy="4" rx="4" ry="4"/><ellipse cx="32.8" cy="4" rx="4" ry="4"/></g></svg>') no-repeat top center;
 }
-// section p {
-//   max-width: 789px;
-//   margin: auto;
-// }
 .display-1 {
   letter-spacing: -2px;
 }
@@ -66,6 +62,11 @@ hr {
     height: 100%;
   }
 }
+.container-restrainer {
+  margin: auto;
+  padding: 0;
+  max-width: map-get($container-max-widths, md);
+}
 
 .navbar-brand {
   svg {
@@ -80,6 +81,7 @@ hr {
 
 .page-home {
   .jumbotron {
+    margin: 0;
     h1 {
       padding-top: 4rem;
       font-weight: 900;
