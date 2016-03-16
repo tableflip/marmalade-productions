@@ -12,6 +12,13 @@
   "socialLink": "Follow us",
   "socialLinkTarget": "https://twitter.com/i/notifications",
   "clientsH1": "Our Clients",
+  "clientsCarousel": [
+    "http://tutorial9.s3.amazonaws.com/uploads/2008/12/logo.png",
+    "http://sbifinishing.com/wordpress/wp-content/uploads/2012/12/Logo-no-background.png",
+    "http://wiki.myexperiment.org/images/MyExperiment_logo_5016x960_trans.png",
+    "http://www.masonbruce.com/wp-content/uploads/2015/03/android-logo-transparent-background.png"
+  ],
+  "clientsFullList": "Nasa - Bit of text about nasa and what it was like to go into space with them, FedEx, Starbucks, Ikea, and many more ...",
   "clientsLink": "Full List of Clients",
   "clientsLinkTarget": "#clients",
   "theteamH1": "Meet the Team",
@@ -28,5 +35,5 @@
   "contactEmail": "email us",
   "contactEmailLink": "film@marmalade-productions.com",
   "contactPhone": "02067883673",
-  "contactLocation": "51.4620149,-0.0694552"
+  "contactLocation": [51.4620149,-0.0694552]
 }

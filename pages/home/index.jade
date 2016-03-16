@@ -30,14 +30,32 @@ html(lang='en')
         a.twitter-timeline(href='https://twitter.com/_bmordan' data-widget-id='709856449963421696' data-tweet-limit='1' data-chrome='noheader nofooter noborders noscrollbar')
         script.
           !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
       a(href=content.socialLinkTarget)
         +icon('twitter-button')   
         span=content.socialLink
     
     section.clients.bg-accent.p-y-3.p-x-1
       h1.text-uppercase.p-b-1=content.clientsH1
+      #clients-carousel.carousel.slide.m-y-1(data-ride='carousel' data-interval='9999999')
+        .carousel-inner(role='listbox')
+          each client, i in content.clientsCarousel
+            .carousel-item(style="background-image: url(#{client});")
+              span.sr-only Client #{i + 1} 
+        a.left.carousel-control(href='#clients-carousel' role='button' data-slide='prev')
+          +icon('left-arrow-grey', 'carousel-icons')
+          span.sr-only Previous client
+        a.right.carousel-control(href='#clients-carousel' role='button' data-slide='next')
+          +icon('right-arrow-grey', 'carousel-icons')
+          span.sr-only Previous client
       a(href=content.clientsLinkTarget)
         span=content.clientsLink
+      br
+      a(href='#clients-fulllist' data-toggle='collapse' aria-expanded='false' aria-controls='clients-fulllist')
+        +icon('down-arrow-grey')
+      #clients-fulllist.collapse
+        p.m-y-1=content.clientsFullList
+        
         
     section.team.p-y-3.p-x-1
       h1.text-uppercase.p-b-1=content.theteamH1
@@ -70,8 +88,7 @@ html(lang='en')
               a(href='mailto:#{content.contactEmailLink}')=content.contactEmail
             p=content.contactPhone
           .col-sm-5
-            -var lnglat = content.contactLocation.split(',')
-            -var mapuri = "https://maps.googleapis.com/maps/api/staticmap?center=51.4603873,-0.0698246&zoom=15&size=400x200&scale=2&maptype=roadmap&markers=color:0xF4E17B%7Cmarkers=size:mid%7C"+lnglat[0]+","+lnglat[1]+"&key=AIzaSyAGfaHukFFe0Mq0SUsfenwBMU9frvLZiyk"
+            -var mapuri = "https://maps.googleapis.com/maps/api/staticmap?center=51.4615700,-0.068100&zoom=15&size=400x200&scale=2&maptype=roadmap&markers=color:0xF4E17B%7Cmarkers=size:mid%7C"+content.contactLocation[0]+","+content.contactLocation[1]+"&key=AIzaSyAGfaHukFFe0Mq0SUsfenwBMU9frvLZiyk"
             img.img-fluid(src=mapuri)
         .row.p-y-1
           .col-xs-12
