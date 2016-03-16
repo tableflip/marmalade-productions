@@ -24,7 +24,7 @@ html(lang='en')
         a(href=content.aboutLinkTarget)=content.aboutLink
         br
         +icon('down-arrow-grey', 'm-t-1')
-    
+
     section.social.bg-primary
       .container.container-restrainer
         h1.text-uppercase=content.socialH1
@@ -40,8 +40,24 @@ html(lang='en')
     section.clients.bg-accent
       .container.container-restrainer
         h1.text-uppercase=content.clientsH1
-        a(href=content.clientsLinkTarget)
-          span=content.clientsLink
+        hr
+        #clients-carousel.carousel.slide.m-y-1(data-ride='carousel' data-interval='9999999')
+          .carousel-inner(role='listbox')
+            each client, i in content.clientsCarousel
+              .carousel-item(style="background-image: url(#{client});")
+                span.sr-only Client #{i + 1} 
+          a.left.carousel-control(href='#clients-carousel' role='button' data-slide='prev')
+            +icon('left-arrow-grey', 'carousel-icons')
+            span.sr-only Previous client
+          a.right.carousel-control(href='#clients-carousel' role='button' data-slide='next')
+            +icon('right-arrow-grey', 'carousel-icons')
+            span.sr-only Previous client
+        a(href=content.clientsLinkTarget)=content.clientsLink
+        br
+        a(href='#clients-fulllist' data-toggle='collapse' aria-expanded='false' aria-controls='clients-fulllist')
+          +icon('down-arrow-grey', 'm-t-1')
+        #clients-fulllist.collapse
+          p.m-t-1=content.clientsFullList
         
     section.team
       .container.container-restrainer
@@ -69,16 +85,17 @@ html(lang='en')
     section.contact
       .container.container-restrainer
         .row.m-b-1
-          .col-sm-7
+          .col-sm-5
             h1.text-uppercase=content.contactH1
             hr
-            p=content.contactCopy
-            p
+            p.text-sm-left=content.contactAddress
+            p.text-sm-left
+              br
               a(href='mailto:#{content.contactEmailLink}')=content.contactEmail
-            p=content.contactPhone
-          .col-sm-5
-            -var lnglat = content.contactLocation.split(',')
-            -var mapuri = "https://maps.googleapis.com/maps/api/staticmap?center=51.4603873,-0.0698246&zoom=15&size=400x200&scale=2&maptype=roadmap&markers=color:0xF4E17B%7Cmarkers=size:mid%7C"+lnglat[0]+","+lnglat[1]+"&key=AIzaSyAGfaHukFFe0Mq0SUsfenwBMU9frvLZiyk"
+              br
+              a(href='tel:#{content.contactPhone}')=content.contactPhone
+          .col-sm-7
+            -var mapuri = "https://maps.googleapis.com/maps/api/staticmap?center=51.4615700,-0.068100&zoom=15&size=400x200&scale=2&maptype=roadmap&markers=color:0xF4E17B%7Cmarkers=size:mid%7C"+content.contactLocation[0]+","+content.contactLocation[1]+"&key=AIzaSyAGfaHukFFe0Mq0SUsfenwBMU9frvLZiyk"
             img.img-fluid(src=mapuri)
         .row.m-t-3
           .col-xs-12

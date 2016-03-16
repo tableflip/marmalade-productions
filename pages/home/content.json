@@ -10,8 +10,15 @@
   "aboutLinkTarget": "#team",
   "socialH1": "Latest tweet",
   "socialLink": "Follow us",
-  "socialLinkTarget": "https://twitter.com/i/notifications",
+  "socialLinkTarget": "https://twitter.com/intent/follow?screen_name=marmaladestu&user_id=298551838",
   "clientsH1": "Our Clients",
+  "clientsCarousel": [
+    "http://tutorial9.s3.amazonaws.com/uploads/2008/12/logo.png",
+    "http://sbifinishing.com/wordpress/wp-content/uploads/2012/12/Logo-no-background.png",
+    "http://wiki.myexperiment.org/images/MyExperiment_logo_5016x960_trans.png",
+    "http://www.masonbruce.com/wp-content/uploads/2015/03/android-logo-transparent-background.png"
+  ],
+  "clientsFullList": "Nasa - Bit of text about nasa and what it was like to go into space with them, FedEx, Starbucks, Ikea, and many more ...",
   "clientsLink": "Full List of Clients",
   "clientsLinkTarget": "#clients",
   "theteamH1": "Meet the Team",
@@ -21,12 +28,12 @@
   "theteamEmail": "email Sherlock",
   "theteamEmailLink": "sherlock@bakerstreet.gov",
   "theteamPhone": "0799786772",
-  "servicesH1": "Servies: The Brief",
+  "servicesH1": "Services: The Brief",
   "servicesCopy": "We'll work with you closely to fully understand your project requirements, from what you want to communicate to the style in which you'd like to do it. We'll then come up with a proposal, budget and time-frame that works for you.",
   "contactH1": "Contact Us",
   "contactAddress": "Maramlade Productions, Unit 1a JAILmake, East Dulwich Road, London. SE22 9BA",
   "contactEmail": "email us",
   "contactEmailLink": "film@marmalade-productions.com",
   "contactPhone": "02067883673",
-  "contactLocation": "51.4620149,-0.0694552"
+  "contactLocation": [51.4620149,-0.0694552]
 }
