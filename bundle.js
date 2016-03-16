@@ -10903,4 +10903,8 @@ require('bootstrap/dist/js/umd/collapse.js')
 // require('bootstrap/dist/js/umd/tooltip.js')
 // require('bootstrap/dist/js/umd/popover.js')
 
+var $ = window.$
+$('.carousel-item').first().addClass('active')
+$('#clients-carousel').carousel()
+
 },{"bootstrap/dist/js/umd/carousel.js":1,"bootstrap/dist/js/umd/collapse.js":2,"jquery":4}]},{},[5]);

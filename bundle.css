@@ -2085,6 +2085,8 @@ body { letter-spacing: 1px; color: #222; text-align: center; font-weight: 500; }
 
 hr { height: 8px; border: 0; background: url('data:image/svg+xml;uft8,<svg width="37" height="8" viewBox="0 0 37 8" xmlns="http://www.w3.org/2000/svg"><title>Group</title><g fill-rule="evenodd"><ellipse cx="4" cy="4" rx="4" ry="4"/><ellipse cx="18.4" cy="4" rx="4" ry="4"/><ellipse cx="32.8" cy="4" rx="4" ry="4"/></g></svg>') no-repeat top center; }
 
+section p { max-width: 789px; margin: auto; }
+
 .display-1 { letter-spacing: -2px; }
 
 .bg-primary { color: #373a3c !important; }
@@ -2108,6 +2110,18 @@ hr { height: 8px; border: 0; background: url('data:image/svg+xml;uft8,<svg width
 .page-home .jumbotron h1 { padding-top: 4rem; font-weight: 900; font-size: 4rem; }
 
 .page-home .jumbotron hr { color: white; }
+
+.page-home .clients .carousel { height: 300px; max-width: 789px; margin: auto; }
+
+.page-home .clients .carousel .carousel-item { height: 300px; background-repeat: no-repeat; background-size: 70% auto; background-position: center center; }
+
+.page-home .clients .carousel .carousel-control.left, .page-home .clients .carousel .carousel-control.right { background-image: none; }
+
+.page-home .clients .carousel .carousel-icons { position: absolute; top: 135px; }
+
+.page-home .clients .carousel .left .carousel-icons { left: 0; }
+
+.page-home .clients .carousel .right .carousel-icons { right: 0; }
 
 .page-home .services #brief { width: 109px; height: auto; margin: auto; }
 
