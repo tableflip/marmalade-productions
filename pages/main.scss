@@ -33,6 +33,9 @@ hr {
   border: 0;
   background: url('data:image/svg+xml;uft8,<svg width="37" height="8" viewBox="0 0 37 8" xmlns="http://www.w3.org/2000/svg"><title>Group</title><g fill-rule="evenodd"><ellipse cx="4" cy="4" rx="4" ry="4"/><ellipse cx="18.4" cy="4" rx="4" ry="4"/><ellipse cx="32.8" cy="4" rx="4" ry="4"/></g></svg>') no-repeat top center;
 }
+p {
+  margin: 0 auto;
+}
 .display-1 {
   letter-spacing: -2px;
 }
@@ -64,10 +67,9 @@ hr {
 }
 .container-restrainer {
   margin: auto;
-  padding: 0;
+  padding: 2rem 0;
   max-width: map-get($container-max-widths, md);
 }
-
 .navbar-brand {
   svg {
     width: 141px;
