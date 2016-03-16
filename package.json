@@ -59,6 +59,7 @@
     "node-sass": "^3.4.2",
     "pre-commit": "^1.1.2",
     "standard": "^6.0.7",
+    "svgo": "^0.6.2",
     "svgshelf": "^1.0.3",
     "watchify": "^3.7.0"
   }

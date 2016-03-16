@@ -26,8 +26,11 @@ html(lang='en')
     section.social.bg-primary.p-y-3.p-x-1
       h1.text-uppercase.p-b-1=content.socialH1
       hr
-      p Calling all actors! We're looking for some talented folk to film with us on a short film project: http://www.castingcallpro.com/uk/job/321903/buried … #actors #film
-      p.m-b-1 3:43 p.m. - 9 Mar 2016
+      article.m-y-1
+        a.twitter-timeline(href='https://twitter.com/_bmordan' data-widget-id='709856449963421696' data-tweet-limit='1' data-chrome='noheader nofooter noborders noscrollbar')
+        script.
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
       a(href=content.socialLinkTarget)
         +icon('twitter-button')   
         span=content.socialLink
