@@ -74,13 +74,14 @@ html(lang='en')
                 a(href='mailto:#{content.theteamEmailLink}')=content.theteamEmail
                 br
                 a(href='tel:#{content.theteamPhone}')=content.theteamPhone
-    
+
     section.services.bg-primary
       .container.container-restrainer
         h1.text-uppercase=content.servicesH1
         hr
         +svg('brief')
-        p.text-md-left=content.servicesCopy
+        p.m-t-1.text-md-left
+          !=md.render(content.servicesCopy)
     
     section.contact
       .container.container-restrainer
@@ -88,7 +89,8 @@ html(lang='en')
           .col-sm-5
             h1.text-uppercase=content.contactH1
             hr
-            p.text-sm-left=content.contactAddress
+            p.text-sm-left
+              !=md.render(content.contactAddress)
             p.text-sm-left
               br
               a(href='mailto:#{content.contactEmailLink}')=content.contactEmail
