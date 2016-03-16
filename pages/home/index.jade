@@ -75,15 +75,16 @@ html(lang='en')
       h1.text-uppercase.p-b-1=content.servicesH1
       hr
       +svg('brief')
-      p.m-t-1.text-md-left=content.servicesCopy
-    
+      p.m-t-1.text-md-left
+        !=md.render(content.servicesCopy)
     section.contact.p-y-3.p-x-1
       .container.p-x-0
         .row
           .col-sm-7
             h1.text-uppercase=content.contactH1
             hr
-            p=content.contactCopy
+            p
+              !=md.render(content.contactAddress)
             p
               a(href='mailto:#{content.contactEmailLink}')=content.contactEmail
             p=content.contactPhone
@@ -95,11 +96,11 @@ html(lang='en')
             ul.list-inline
               li.list-inline-item
                 +icon('facebook-button')
-                li.list-inline-item
-                  +icon('twitter-button')
-                  li.list-inline-item
-                    +icon('vimeo-button')
-    footer.text-xs-center.text-md-right
+              li.list-inline-item
+                +icon('twitter-button')
+              li.list-inline-item
+                +icon('vimeo-button')
+    footer.text-xs-center
       small copyright &#169; 2016 Marmalade Productions
 
     include ../bundle.svg

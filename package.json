@@ -49,6 +49,7 @@
     "jade": "^1.11.0",
     "jadeify": "^4.4.0",
     "jquery": "^2.2.1",
+    "markdown-it": "^6.0.0",
     "npm-run-all": "^1.2.11",
     "postcss": "^5.0.9",
     "postcss-cli": "^2.5.1",
