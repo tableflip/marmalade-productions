@@ -10,6 +10,7 @@
 // See `node_modules/bootstrap/scss/_variables.scss` for more options
 $brand-primary: #F4E17B !default;
 $brand-accent: #DAE0CC;
+$brand-typography: #222630;
 $brand-gray: #2E343F;
 $brand-gray-light: #C6B877;
 $enable-rounded: false;
@@ -24,7 +25,7 @@ $display1-weight: 500;
 
 body {
   letter-spacing: 1px;
-  color: #222;
+  color: $brand-typography;
   text-align:center;
   font-weight:500;
 }
@@ -49,6 +50,12 @@ p {
   background-color: $brand-accent;
   a {
     color: $body-color !important;
+  }
+}
+.bg-typography {
+  background-color: $brand-typography;
+  a {
+    color: white;
   }
 }
 .fill-white {
@@ -76,9 +83,31 @@ p {
     height: 30px;
   }
 }
-
+.opacity-half {
+  opacity: 0.2;
+}
 .font-feature {
   font-family: $font-family-serif;
+}
+.carousel-control.left, .carousel-control.right {
+  background-image: none;
+}
+.carousel {
+  height: 300px;
+  max-width: 789px;
+  margin: auto;
+  .carousel-item {
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: 65% auto;
+    background-position: center center;
+  }
+  .carousel-icons {
+    position: absolute;
+    top: 135px;
+  }
+  .left .carousel-icons { left: 0; }
+  .right .carousel-icons { right: 0; }
 }
 
 .page-home {
@@ -93,33 +122,37 @@ p {
       color: white;
     }
   }
-  .clients {
-    .carousel {
-      height: 300px;
-      max-width: 789px;
-      margin: auto;
-      .carousel-item {
-        height: 300px;
-        background-repeat: no-repeat;
-        background-size: 70% auto;
-        background-position: center center;
-      }
-      .carousel-control.left, .carousel-control.right {
-        background-image: none;
-      }
-      .carousel-icons {
-        position: absolute;
-        top: 135px;
-      }
-      .left .carousel-icons { left: 0; }
-      .right .carousel-icons { right: 0; }
-    }
-  }
+
   .services {
-    #brief {
-      width: 109px;
-      height: auto;
-      margin: auto;
+    $unit-size: 64px;
+    .rolodex {
+      height: $unit-size;
+      position: relative;
+      .rolodex-control {
+        height: 100%;
+        position: absolute;
+        padding-top: 16px;
+        top: 0;
+      }
+      .left {left: 0;}
+      .right {right: 0;}
+      .rolodex-inner {
+        height: 100%;
+        margin: auto;
+        overflow-x: hidden;
+        .rolodex-list {
+          white-space: nowrap;
+          overflow-x: hidden;
+          position: absolute;
+          top: 0;
+          left: 10%;
+        }
+        .svg-icon {
+          opacity: 0.2;
+          width: $unit-size;
+          height: $unit-size;
+        }
+      }
     }
   }
   .contact {
