@@ -15,41 +15,34 @@ var $ = window.$
 $('.carousel-item').first().addClass('active')
 $('#clients-carousel').carousel()
 
-var Rolodex = function Rolodex ($el) {
-  this.el = $el
-  this.items = $('.rolodex-item').size()
-  this.itemWidth = this.el.width() / this.items
-  this.rolodexInnerWidth = this.itemWidth * 3
-  this.position = 1
-
-  var self = this
-
+function rolodex () {
   $('[data-dex="prev"]').on('click', slide.bind(null, -1))
   $('[data-dex="next"]').on('click', slide.bind(null, 1))
 
   function slide (dir, e) {
     e.preventDefault()
-    var xd
-    updatePosition(dir)
-    var x = $('.rolodex-list').position()
-    if (dir > 0) xd = x.left + self.itemWidth
-    if (dir < 0) xd = x.left - self.itemWidth
-    $('.rolodex-list').animate({ left: xd + 'px' }, 250, move.bind(null, dir))
+    manageActiveClass(dir)
+    loopItems(dir)
+    manageContent()
   }
 
-  function move (dir) {
-    if (dir < 0) $('.rolodex-item').first().clone().appendTo('.rolodex-list')
-    if (dir > 0) $('.rolodex-item').last().clone().prependTo('.rolodex-list')
+  function loopItems (dir) {
+    if (dir < 0) $('.rolodex-item').first().remove().first().clone().appendTo('.rolodex-list')
+    if (dir > 0) $('.rolodex-item').last().remove().last().clone().prependTo('.rolodex-list')
   }
 
-  function updatePosition (dir) {
-    var newPosition
-    if (dir > 0) newPosition = self.position + 1
-    if (dir < 0) newPosition = self.position - 1
-    if (newPosition > self.items) newPosition = self.items
-    if (newPosition < 0) newPosition = 0
-    return self.position = newPosition
+  function manageActiveClass (dir) {
+    var target
+    if (dir < 0) target = $('.rolodex-item.active').next().get(0)
+    if (dir > 0) target = $('.rolodex-item.active').prev().get(0)
+    $('.rolodex-item.active').removeClass('active')
+    $(target).addClass('active')
+  }
+
+  function manageContent () {
+    var key = $('.rolodex-item.active').find('use').get(0).href.baseVal
+    console.log(key)
   }
 }
 
-new Rolodex($('.rolodex'))
+rolodex()
