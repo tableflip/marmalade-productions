@@ -23,7 +23,7 @@ function rolodex () {
     e.preventDefault()
     manageActiveClass(dir)
     loopItems(dir)
-    manageContent()
+    manageActiveContent()
   }
 
   function loopItems (dir) {
@@ -39,9 +39,11 @@ function rolodex () {
     $(target).addClass('active')
   }
 
-  function manageContent () {
-    var key = $('.rolodex-item.active').find('use').get(0).href.baseVal
-    console.log(key)
+  function manageActiveContent () {
+    var key = $('.rolodex-item.active').find('use').get(0).href.baseVal.replace('#', '')
+    var target = $('[data-dex-item="$"]'.replace('$', key))
+    $('.rolodex-content-item').hide()
+    $(target).show()
   }
 }
 

@@ -81,7 +81,7 @@ html(lang='en')
       .container.container-restrainer
         h1.text-uppercase=content.servicesH1
         hr
-        #rolodex.rolodex
+        .rolodex
           .rolodex-inner
             ul.list-inline.rolodex-list
               li.list-inline-item.rolodex-item
@@ -96,6 +96,11 @@ html(lang='en')
             +icon('left-arrow-grey')
           a.rolodex-control.right.bg-primary(href='#rolodex' role='button' data-dex='next')
             +icon('right-arrow-grey')
+        .rolodex-content.m-y-3
+          p.rolodex-content-item(data-dex-item='brief') brief Viverra nec. Ratione dignissim cillum mi quam hic, ultricies, delectus corporis nascetur voluptas interdum, libero quaerat, litora habitasse, semper laboriosam, accusantium alias quo facilisis sapiente soluta reprehenderit sint! Laoreet corporis sint risus, recusandae curae? Numquam doloremque, auctor ut rhoncus.
+          p.rolodex-content-item(data-dex-item='pre-production') pre-production Viverra nec. Ratione dignissim cillum mi quam hic, ultricies, delectus corporis nascetur voluptas interdum, libero quaerat, litora habitasse, semper laboriosam.
+          p.rolodex-content-item(data-dex-item='the-shoot') The Shoot -production Viverra nec. Ratione dignissim cillum mi quam hic, ultricies, delectus corporis nascetur voluptas interdum, libero quaerat, litora habitasse, semper laboriosam.
+          p.rolodex-content-item(data-dex-item='post-production') post-production Viverra nec. Ratione dignissim cillum mi quam hic, ultricies, delectus corporis nascetur voluptas interdum, libero quaerat, litora habitasse, semper laboriosam.
     
     section#contact.contact
       .container.container-restrainer

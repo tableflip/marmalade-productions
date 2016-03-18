@@ -144,7 +144,7 @@ p {
         .rolodex-list {
           white-space: nowrap;
           overflow-x: hidden;
-          position: relative;;
+          position: relative;
           top: 0;
           left: 0;
         }
@@ -160,6 +160,12 @@ p {
           width: $unit-size;
           height: $unit-size;
         }
+      }
+    }
+    .rolodex-content {
+      height: $unit-size * 2;
+      .rolodex-content-item:not(:nth-child(2)) {
+        display: none;
       }
     }
   }
