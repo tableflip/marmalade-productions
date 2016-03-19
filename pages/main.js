@@ -16,25 +16,61 @@ $('.carousel-item').first().addClass('active')
 $('#clients-carousel').carousel()
 
 function rolodex () {
-  $('[data-dex="prev"]').on('click', slide.bind(null, -1))
-  $('[data-dex="next"]').on('click', slide.bind(null, 1))
+  var itemWidth = $('.rolodex-item').first().width()
+  var animating
+  $('[data-dex="prev"]').on('click', slide.bind(null, '-='))
+  $('[data-dex="next"]').on('click', slide.bind(null, '+='))
+
+  render()
 
   function slide (dir, e) {
     e.preventDefault()
+    if (animating) return
     manageActiveClass(dir)
-    loopItems(dir)
     manageActiveContent()
+
+    if ($('.rolodex-item').first().position().left === 0 && dir === '+=') {
+      loopItems(dir, moveItems)
+    } else {
+      moveItems(dir, loopItems)
+    }
   }
 
-  function loopItems (dir) {
-    if (dir < 0) $('.rolodex-item').first().remove().first().clone().appendTo('.rolodex-list')
-    if (dir > 0) $('.rolodex-item').last().remove().last().clone().prependTo('.rolodex-list')
+  function moveItems (dir, cb) {
+    var finish = 0
+    animating = !animating
+    $('.rolodex-item').animate({left: dir + itemWidth}, 500, function () {
+      finish += 1
+      if (finish === $('.rolodex-item').length) {
+        animating = !animating
+        if (cb) cb(dir)
+      }
+    })
+  }
+
+  function loopItems (dir, cb) {
+    var delta
+    if (dir === '-=') {
+      delta = (itemWidth * $('.rolodex-item').length) - itemWidth
+      $('.rolodex-item').first().remove().first().clone().appendTo('.rolodex-list').css('left', delta + 'px')
+    }
+    if (dir === '+=') {
+      delta = 0 - itemWidth
+      $('.rolodex-item').last().remove().last().clone().prependTo('.rolodex-list').css('left', (0 - itemWidth) + 'px')
+    }
+    if (cb) cb(dir)
+  }
+
+  function render () {
+    $('.rolodex-item').each(function (i, item) {
+      $(item).css('left', (itemWidth * i) + 'px')
+    })
   }
 
   function manageActiveClass (dir) {
     var target
-    if (dir < 0) target = $('.rolodex-item.active').next().get(0)
-    if (dir > 0) target = $('.rolodex-item.active').prev().get(0)
+    if (dir === '-=') target = $('.rolodex-item.active').next().get(0)
+    if (dir === '+=') target = $('.rolodex-item.active').prev().get(0)
     $('.rolodex-item.active').removeClass('active')
     $(target).addClass('active')
   }

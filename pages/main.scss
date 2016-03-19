@@ -138,23 +138,23 @@ p {
       .right {right: 0;}
       .rolodex-inner {
         height: 100%;
-        width: $unit-size * 3.9;
+        width: $unit-size * 3.6;
         margin: auto;
         overflow-x: hidden;
         .rolodex-list {
           white-space: nowrap;
-          overflow-x: hidden;
           position: relative;
           top: 0;
           left: 0;
         }
         .rolodex-item {
+          position: absolute;
+          top: 0;
           opacity: 0.2;
-          transition: opacity 0.25s;
         }
         .rolodex-item.active {
           opacity: 1;
-          transition: opacity 0.25s;
+          transition: opacity 1.5s;
         }
         .svg-icon {
           width: $unit-size;
