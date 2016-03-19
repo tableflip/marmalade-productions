@@ -13,8 +13,6 @@ html(lang='en')
       h1.font-feature=content.jumbotronH1
       +icon('dots', 'fill-white')
       p.lead=content.jumbotronLead
-    .container-fluid.bg-typography
-      a(href='#contact') Contact us
     
     section.about
       .container.container-restrainer
@@ -43,7 +41,7 @@ html(lang='en')
       .container.container-restrainer
         h1.text-uppercase=content.clientsH1
         hr
-        #clients-carousel.carousel.slide.m-y-1(data-ride='carousel' data-interval='999999')
+        #clients-carousel.carousel.slide.m-y-1(data-ride='carousel' data-interval='9999999')
           .carousel-inner(role='listbox')
             each client, i in content.clientsCarousel
               .carousel-item(style="background-image: url(#{client});")
@@ -68,7 +66,7 @@ html(lang='en')
         .container.p-x-0
           .row
             .col-sm-5
-              img.img-fluid.m-b-1(src='#{content.theteamMugshot}' alt='#{content.theteamName}')
+              img.img-fluid(src='#{content.theteamMugshot}' alt='#{content.theteamName}')
             .col-sm-7.text-sm-left
               p=content.theteamName
               p=content.theteamCopy
@@ -95,7 +93,7 @@ html(lang='en')
           each paragraph, i in content.servicesCopy
             p.rolodex-content-item(data-dex-item='#{content.services[i]}')=paragraph
     
-    section#contact.contact
+    section.contact
       .container.container-restrainer
         .row.m-b-1
           .col-sm-5
@@ -103,7 +101,7 @@ html(lang='en')
             hr
             p.text-sm-left
               !=md.render(content.contactAddress)
-            p.text-sm-left.m-b-1
+            p.text-sm-left
               br
               a(href='mailto:#{content.contactEmailLink}')=content.contactEmail
               br
