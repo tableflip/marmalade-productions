@@ -79,9 +79,9 @@ html(lang='en')
 
     section.services.bg-primary
       .container.container-restrainer
-        h1.text-uppercase=content.servicesH1
+        h1.text-uppercase.rolodex-titlebar #{content.servicesH1}:&nbsp;#[span(id='rolodex-titlebar') Some var]
         hr
-        .rolodex
+        .rolodex.m-t-3
           .rolodex-inner
             ul.list-inline.rolodex-list
               each item in content.services
