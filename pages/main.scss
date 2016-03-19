@@ -164,8 +164,18 @@ p {
     }
     .rolodex-content {
       height: $unit-size * 2;
-      .rolodex-content-item:not(:nth-child(2)) {
-        display: none;
+      .rolodex-content-item {
+        height: 0;
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+      .rolodex-content-item.active {
+        opacity: 1;
+        transition: opacity 0.5s;
+      }
+      p {
+        position: relative;
+        top: 0; left: 0;
       }
     }
   }

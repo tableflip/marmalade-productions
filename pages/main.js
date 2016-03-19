@@ -17,11 +17,12 @@ $('#clients-carousel').carousel()
 
 function rolodex () {
   var itemWidth = $('.rolodex-item').first().width()
-  var animating
+  var animating = false
+
   $('[data-dex="prev"]').on('click', slide.bind(null, '-='))
   $('[data-dex="next"]').on('click', slide.bind(null, '+='))
 
-  render()
+  initialRender()
 
   function slide (dir, e) {
     e.preventDefault()
@@ -61,7 +62,9 @@ function rolodex () {
     if (cb) cb(dir)
   }
 
-  function render () {
+  function initialRender () {
+    $('.rolodex-item:nth-child(2)').addClass('active')
+    $('.rolodex-content-item:nth-child(2)').addClass('active')
     $('.rolodex-item').each(function (i, item) {
       $(item).css('left', (itemWidth * i) + 'px')
     })
@@ -71,15 +74,18 @@ function rolodex () {
     var target
     if (dir === '-=') target = $('.rolodex-item.active').next().get(0)
     if (dir === '+=') target = $('.rolodex-item.active').prev().get(0)
-    $('.rolodex-item.active').removeClass('active')
-    $(target).addClass('active')
+    manageActiveState('rolodex-item', target)
   }
 
   function manageActiveContent () {
     var key = $('.rolodex-item.active').find('use').get(0).href.baseVal.replace('#', '')
     var target = $('[data-dex-item="$"]'.replace('$', key))
-    $('.rolodex-content-item').hide()
-    $(target).show()
+    manageActiveState('rolodex-content-item', target)
+  }
+
+  function manageActiveState (elClassName, target) {
+    $('.' + elClassName + '.active').removeClass('active')
+    $(target).addClass('active')
   }
 }
 
