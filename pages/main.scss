@@ -10,6 +10,7 @@
 // See `node_modules/bootstrap/scss/_variables.scss` for more options
 $brand-primary: #F4E17B !default;
 $brand-accent: #DAE0CC;
+$brand-typography: #222630;
 $brand-gray: #2E343F;
 $brand-gray-light: #C6B877;
 $enable-rounded: false;
@@ -24,7 +25,7 @@ $display1-weight: 500;
 
 body {
   letter-spacing: 1px;
-  color: #222;
+  color: $brand-typography;
   text-align:center;
   font-weight:500;
 }
@@ -49,6 +50,12 @@ p {
   background-color: $brand-accent;
   a {
     color: $body-color !important;
+  }
+}
+.bg-typography {
+  background-color: $brand-typography;
+  a {
+    color: white;
   }
 }
 .fill-white {
