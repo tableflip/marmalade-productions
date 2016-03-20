@@ -1,16 +1,22 @@
 window.$ = window.jQuery = require('jquery')
 require('bootstrap/dist/js/umd/carousel.js')
 require('bootstrap/dist/js/umd/collapse.js')
-// require('bootstrap/dist/js/umd/util.js')
-// require('bootstrap/dist/js/umd/alert.js')
-// require('bootstrap/dist/js/umd/button.js')
-// require('bootstrap/dist/js/umd/dropdown.js')
-// require('bootstrap/dist/js/umd/modal.js')
-// require('bootstrap/dist/js/umd/scrollspy.js')
-// require('bootstrap/dist/js/umd/tab.js')
-// require('bootstrap/dist/js/umd/tooltip.js')
-// require('bootstrap/dist/js/umd/popover.js')
 
 var $ = window.$
 $('.carousel-item').first().addClass('active')
 $('#clients-carousel').carousel()
+
+$('#play').on('click', function (e) {
+  $('.jumbotronVideoPlayer').show()
+  player('play')
+})
+
+$('button.close').on('click', function (e) {
+  $('.jumbotronVideoPlayer').hide()
+  player('unload')
+})
+
+function player (opt) {
+  var opts = JSON.stringify({ 'method': opt })
+  $('iframe').get(0).contentWindow.postMessage(opts, '*')
+}

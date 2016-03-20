@@ -12,7 +12,15 @@ html(lang='en')
     .jumbotron.bg-inverse(style="background: url(#{content.jumbotronBg}); background-size:cover; min-height:400px;")
       h1.font-feature=content.jumbotronH1
       +icon('dots', 'fill-white')
-      p.lead=content.jumbotronLead
+      br
+      #play.lead.m-t-1
+        button.btn.btn-link.white(type='button')=content.jumbotronLead
+        +icon('right-arrow-grey', 'play')
+    .jumbotronVideoPlayer
+      button.close.white.m-x-1.m-y-1(type='button' aria-label='Close')
+        span(aria-hidden='true') &times;
+      .embed-responsive.embed-responsive-16by9
+        iframe.embed-responsive-item(src='#{content.jumbotronVideo}?api=1' webkitallowfullscreen mozallowfullscreen allowfullscreen)
     
     section.about
       .container.container-restrainer
