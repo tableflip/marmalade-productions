@@ -17,8 +17,8 @@ html(lang='en')
         button.btn.btn-link.white(type='button')=content.jumbotronLead
         +icon('right-arrow-grey', 'play')
     .jumbotronVideoPlayer
-      button.close.white.m-x-1.m-y-1(type='button' aria-label='Close')
-        span(aria-hidden='true') &times;
+      button.close(type='button' aria-label='Close')
+        span.white(aria-hidden='true') &times;
       .embed-responsive.embed-responsive-16by9
         iframe.embed-responsive-item(src='#{content.jumbotronVideo}?api=1' webkitallowfullscreen mozallowfullscreen allowfullscreen)
     
