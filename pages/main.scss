@@ -10,7 +10,6 @@
 // See `node_modules/bootstrap/scss/_variables.scss` for more options
 $brand-primary: #F4E17B !default;
 $brand-accent: #DAE0CC;
-$brand-typography: #222630;
 $brand-gray: #2E343F;
 $brand-gray-light: #C6B877;
 $enable-rounded: false;
@@ -25,7 +24,7 @@ $display1-weight: 500;
 
 body {
   letter-spacing: 1px;
-  color: $brand-typography;
+  color: #222;
   text-align:center;
   font-weight:500;
 }
@@ -52,14 +51,11 @@ p {
     color: $body-color !important;
   }
 }
-.bg-typography {
-  background-color: $brand-typography;
-  a {
-    color: white;
-  }
-}
 .fill-white {
   fill: white;
+}
+.white {
+  color: white;
 }
 .svg-icon {
   vertical-align: middle;
