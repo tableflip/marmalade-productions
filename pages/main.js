@@ -7,7 +7,8 @@ $('.carousel-item').first().addClass('active')
 $('#clients-carousel').carousel()
 
 $('#play').on('click', function (e) {
-  $('.container-video').addClass('active')
+  $('.container-lead').addClass('video-playing')
+  player('play')
 })
 
 function player (opt) {

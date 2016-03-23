@@ -9,8 +9,11 @@ html(lang='en')
     .navbar.navbar-light.bg-primary
       .navbar-brand
         +svg('marmalade-logo')
-    .jumbotron.bg-inverse(style="background: url(#{content.jumbotronBg}); background-size:cover; min-height:400px;")
-      .container
+    .jumbotron.bg-inverse
+      .container-video
+        .embed-responsive.embed-responsive-16by9
+          iframe.embed-responsive-item(src='#{content.jumbotronVideo}?api=1' webkitallowfullscreen mozallowfullscreen allowfullscreen)
+      .container-lead(style="background: url(#{content.jumbotronBg}); background-size:cover; min-height:400px;")
         h1.font-feature=content.jumbotronH1
         +icon('dots', 'fill-white')
         br
@@ -18,9 +21,6 @@ html(lang='en')
           button.btn.btn-link.white(type='button')=content.jumbotronLead
           br
           +icon('down-arrow-grey', 'play m-t-2')
-      .container-video
-        .embed-responsive.embed-responsive-16by9
-          iframe.embed-responsive-item(src='#{content.jumbotronVideo}?api=1' webkitallowfullscreen mozallowfullscreen allowfullscreen)
               
     section.about
       .container.container-restrainer
