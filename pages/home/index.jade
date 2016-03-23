@@ -12,7 +12,7 @@ html(lang='en')
     .jumbotron.bg-inverse
       .container-video
         .embed-responsive.embed-responsive-16by9
-          iframe.embed-responsive-item(src='#{content.jumbotronVideo}?api=1')
+          iframe#video.embed-responsive-item(src='#{content.jumbotronVideo}?api=1' webkitallowfullscreen mozallowfullscreen allowfullscreen)
           //- webkitallowfullscreen mozallowfullscreen allowfullscreen
       .container-lead(style="background: url(#{content.jumbotronBg}); background-size:cover; min-height:400px;")
         h1.font-feature=content.jumbotronH1

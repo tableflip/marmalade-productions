@@ -98,7 +98,7 @@ p {
     h1 {
       padding-top: 4rem;
       font-weight: 900;
-      font-size: 4rem;
+      font-size: 3rem;
     }
     hr {
       color: white;
@@ -113,27 +113,31 @@ p {
       left: 0;
       width: 100%;
       height: 100%;
+      padding: 1rem;
     }
     .container-lead.video-playing {
       opacity: 0;
     }
-  }
-  .container-video {
-    display: none;
-    background-color: black;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .container-video::after {
-    content: 'close';
-    color: $brand-primary;
-    position: absolute;
-    bottom: -1.5rem;
-    left: 50%;
-    margin-left: -1.5rem;
+    .container-video {
+      display: none;
+      background-color: black;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      .embed-responsive {
+        position: static;
+      }
+    }
+    .container-video::after {
+      content: 'close';
+      color: $brand-primary;
+      position: absolute;
+      bottom: -1.5rem;
+      left: 50%;
+      margin-left: -1.5rem;
+    }
   }
   .clients {
     .carousel {
@@ -172,9 +176,11 @@ p {
 }
 
 @media (min-width: map-get($grid-breakpoints, md)) {
-  .jumbotron {
-    .embed-responsive {
-      position: static;
+  .home-page {
+    .jumbotron {
+      h1 {
+        font-size: 4rem;
+      }
     }
   }
 }
