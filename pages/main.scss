@@ -60,6 +60,9 @@ p {
 .stroke-white {
   stroke: white;
 }
+.white {
+  color: white;
+}
 .svg-icon {
   vertical-align: middle;
   display: inline-block;
@@ -133,10 +136,10 @@ p {
     .container-video::after {
       content: 'close';
       color: $brand-primary;
+      opacity: 0.5;
       position: absolute;
       bottom: -1.5rem;
-      left: 50%;
-      margin-left: -1.5rem;
+      right: 12px;
     }
   }
   .clients {

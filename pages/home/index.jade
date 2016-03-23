@@ -9,6 +9,7 @@ html(lang='en')
     .navbar.navbar-light.bg-primary
       .navbar-brand
         +svg('marmalade-logo')
+
     .jumbotron.bg-inverse
       .container-video
         .embed-responsive.embed-responsive-16by9
@@ -22,7 +23,9 @@ html(lang='en')
           button.btn.btn-link.white(type='button')=content.jumbotronLead
           br
           +icon('down-arrow-white', 'm-t-3')
-              
+    .container-fluid.bg-inverse
+      a.white(href='#contact') Contact us
+
     section.about
       .container.container-restrainer
         h1.text-uppercase=content.aboutH1
@@ -92,7 +95,7 @@ html(lang='en')
         p.m-t-1.text-md-left
           !=md.render(content.servicesCopy)
     
-    section.contact
+    section#contact.contact
       .container.container-restrainer
         .row.m-b-1
           .col-sm-5
@@ -100,7 +103,7 @@ html(lang='en')
             hr
             p.text-sm-left
               !=md.render(content.contactAddress)
-            p.text-sm-left
+            p.text-sm-left.m-b-1
               br
               a(href='mailto:#{content.contactEmailLink}')=content.contactEmail
               br
