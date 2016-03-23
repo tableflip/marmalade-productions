@@ -7,16 +7,20 @@ $('.carousel-item').first().addClass('active')
 $('#clients-carousel').carousel()
 
 $('#play').on('click', function (e) {
+  e.preventDefault()
   $('.container-lead').addClass('video-playing')
+  $('#close').show()
   player('play')
-  initStopPlayer()
+})
+
+$('#close').on('click', function (e) {
+  e.preventDefault()
+  $('.container-lead').removeClass('video-playing')
+  $('#close').hide()
+  player('unload')
 })
 
 function player (opt) {
   var opts = JSON.stringify({ 'method': opt })
   $('iframe').get(0).contentWindow.postMessage(opts, '*')
-}
-
-function initStopPlayer () {
-  $('.container-video').on('click', player.bind(null, 'unload'))
 }

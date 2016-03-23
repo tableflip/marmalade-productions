@@ -103,14 +103,8 @@ p {
     hr {
       color: white;
     }
-    .play {
-      color: white;
-      fill: white;
-      stroke: white;
-      stroke-width: 0.4;
-    }
-    .play:hover {
-      stroke: $brand-primary;
+    #close {
+      display: none;
     }
     .container-lead {
       height: 100%;
