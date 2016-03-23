@@ -7,13 +7,7 @@ $('.carousel-item').first().addClass('active')
 $('#clients-carousel').carousel()
 
 $('#play').on('click', function (e) {
-  $('.jumbotronVideoPlayer').show()
-  player('play')
-})
-
-$('button.close').on('click', function (e) {
-  $('.jumbotronVideoPlayer').hide()
-  player('unload')
+  $('.container-video').addClass('active')
 })
 
 function player (opt) {
