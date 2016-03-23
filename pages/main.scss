@@ -138,12 +138,13 @@ p {
         height: 100%;
         width: $unit-size * 3.6;
         margin: auto;
-        overflow-x: hidden;
+        overflow: hidden;
         .rolodex-list {
           white-space: nowrap;
           position: relative;
           top: 0;
           left: 0;
+          margin-bottom: 0;
         }
         .rolodex-item {
           position: absolute;
