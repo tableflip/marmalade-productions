@@ -9,9 +9,14 @@ $('#clients-carousel').carousel()
 $('#play').on('click', function (e) {
   $('.container-lead').addClass('video-playing')
   player('play')
+  initStopPlayer()
 })
 
 function player (opt) {
   var opts = JSON.stringify({ 'method': opt })
   $('iframe').get(0).contentWindow.postMessage(opts, '*')
+}
+
+function initStopPlayer () {
+  $('.container-video').on('click', player.bind(null, 'unload'))
 }

@@ -89,6 +89,7 @@ p {
 
 .page-home {
   .jumbotron {
+    position: relative;
     background-color: black;
     height: 400px;
     max-height: 400px;
@@ -176,7 +177,6 @@ p {
 
 @media (min-width: map-get($grid-breakpoints, md)) {
   .jumbotron {
-    position: relative;
     .embed-responsive {
       position: static;
     }
