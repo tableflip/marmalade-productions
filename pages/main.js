@@ -7,18 +7,16 @@ $('.carousel-item').first().addClass('active')
 $('#clients-carousel').carousel()
 
 $('#play').on('click', function (e) {
-  e.preventDefault()
   $('.container-lead').addClass('video-playing')
-  $('#close').show()
+  $('.container-video').show().on('click', stopVideo)
   player('play')
 })
 
-$('#close').on('click', function (e) {
-  e.preventDefault()
+function stopVideo () {
   $('.container-lead').removeClass('video-playing')
-  $('#close').hide()
+  $('.container-video').hide().off('click', this)
   player('unload')
-})
+}
 
 function player (opt) {
   var opts = JSON.stringify({ 'method': opt })
