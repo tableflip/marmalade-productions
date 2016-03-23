@@ -177,8 +177,7 @@ p {
     }
   }
 }
-
-@media (min-width: map-get($grid-breakpoints, md)) {
+@include media-breakpoint-up(md) {
   .home-page {
     .jumbotron {
       h1 {
