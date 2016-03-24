@@ -4,8 +4,8 @@ module.exports = function () {
   var itemWidth = $('.rolodex-item').first().width()
   var animating = false
 
-  $('[data-dex="prev"]').on('click', slide.bind(null, '-='))
-  $('[data-dex="next"]').on('click', slide.bind(null, '+='))
+  $('[data-dex="prev"]').on('click', slide.bind(null, '<--'))
+  $('[data-dex="next"]').on('click', slide.bind(null, '-->'))
 
   initialRender()
 
@@ -18,14 +18,20 @@ module.exports = function () {
   }
 
   function manageAnimation (dir) {
-    var notSetUp = ($('.rolodex-item').first().position().left === 0 && dir === '+=')
+    var notSetUp = ($('.rolodex-item').first().position().left === 0 && dir === '-->')
     notSetUp ? loopItems(dir, moveItems) : moveItems(dir, loopItems)
+  }
+
+  function getDir (dir) {
+    if (dir === '-->') return '+='
+    if (dir === '<--') return '-='
   }
 
   function moveItems (dir, cb) {
     var finish = 0
     animating = !animating
-    $('.rolodex-item').animate({left: dir + itemWidth}, 500, function () {
+    var delta = getDir(dir)
+    $('.rolodex-item').animate({left: delta + itemWidth}, 500, function () {
       finish += 1
       if (finish === $('.rolodex-item').length) {
         animating = !animating
@@ -35,7 +41,7 @@ module.exports = function () {
   }
 
   function loopItems (dir, cb) {
-    (dir === '+=') ? loopLast() : loopFirst()
+    (dir === '-->') ? loopLast() : loopFirst()
     if (cb) cb(dir)
   }
 
@@ -48,14 +54,14 @@ module.exports = function () {
     $('.rolodex-item').last().remove().last().clone().prependTo('.rolodex-list').css('left', (0 - itemWidth) + 'px')
   }
 
-  function getCurrentDex () {
+  function getCurrentlyActive () {
     return $('.rolodex .active').data('dex-item')
   }
 
   function manageActiveClass (dir) {
     var target
-    if (dir === '-=') target = $('.rolodex-item.active').next().get(0)
-    if (dir === '+=') target = $('.rolodex-item.active').prev().get(0)
+    if (dir === '<--') target = $('.rolodex-item.active').next().get(0)
+    if (dir === '-->') target = $('.rolodex-item.active').prev().get(0)
     manageActiveState(target)
   }
 
@@ -65,7 +71,7 @@ module.exports = function () {
   }
 
   function manageActiveContent () {
-    var key = getCurrentDex()
+    var key = getCurrentlyActive()
     $('.rolodex-content .active').removeClass('active')
     var target = $('[data-dex-item="$"]'.replace('$', key))
     $(target).addClass('active')
@@ -78,9 +84,14 @@ module.exports = function () {
   }
 
   function initialRender () {
-    $('.rolodex-item:nth-child(2)').addClass('active')
-    $('.rolodex-content-item:nth-child(2)').addClass('active')
+    var initPosition = findMiddleChild()
+    $('.rolodex-item:nth-child(' + initPosition + ')').addClass('active')
+    $('.rolodex-content-item:nth-child(' + initPosition + ')').addClass('active')
     $('.rolodex-item').each(function (i, item) { $(item).css('left', (itemWidth * i) + 'px') })
-    updateActiveContentTitle(getCurrentDex())
+    updateActiveContentTitle(getCurrentlyActive())
+  }
+
+  function findMiddleChild () {
+    return Math.floor($('.rolodex-item').size() / 2)
   }
 }
