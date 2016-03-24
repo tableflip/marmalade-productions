@@ -2097,7 +2097,11 @@ p { margin: 0 auto; }
 
 .bg-accent a { color: #373a3c !important; }
 
+.white { color: white; }
+
 .fill-white { fill: white; }
+
+.stroke-white { stroke: white; }
 
 .white { color: white; }
 
@@ -2111,11 +2115,21 @@ p { margin: 0 auto; }
 
 .font-feature { font-family: "Austin Roman", Georgia, "Times New Roman", Times, serif; }
 
-.page-home .jumbotron { margin: 0; }
+.page-home .jumbotron { position: relative; background-color: black; height: 400px; max-height: 400px; margin: 0; padding: 0; }
 
-.page-home .jumbotron h1 { padding-top: 4rem; font-weight: 900; font-size: 4rem; }
+.page-home .jumbotron h1 { padding-top: 4rem; font-weight: 900; font-size: 3rem; }
 
 .page-home .jumbotron hr { color: white; }
+
+.page-home .jumbotron .container-lead { height: 100%; width: 100%; opacity: 1; -webkit-transition: opacity 1s; transition: opacity 1s; position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; padding: 1rem; }
+
+.page-home .jumbotron .container-lead.video-playing { opacity: 0; }
+
+.page-home .jumbotron .container-video { display: none; background-color: black; position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; }
+
+.page-home .jumbotron .container-video .embed-responsive { position: static; }
+
+.page-home .jumbotron .container-video::after { content: 'close'; color: #F5E274; opacity: 0.5; position: absolute; bottom: -1.5rem; right: 12px; }
 
 .page-home .clients .carousel { height: 300px; max-width: 789px; margin: auto; }
 
@@ -2132,4 +2146,6 @@ p { margin: 0 auto; }
 .page-home .services #brief { width: 109px; height: auto; margin: auto; }
 
 .page-home .contact .list-group-horizontal { width: 8.5rem; }
+
+@media (min-width: 768px) { .home-page .jumbotron h1 { font-size: 4rem; } }
 
