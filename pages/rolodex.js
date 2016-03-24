@@ -1,5 +1,4 @@
-window.$ = window.jQuery = require('jquery')
-var $ = window.$
+var $ = window.$ = window.jQuery = require('jquery')
 
 module.exports = function () {
   var itemWidth = $('.rolodex-item').first().width()
@@ -50,36 +49,38 @@ module.exports = function () {
   }
 
   function getCurrentDex () {
-    return $('.rolodex-item.active').find('use').get(0).href.baseVal.replace('#', '')
+    return $('.rolodex .active').data('dex-item')
   }
 
   function manageActiveClass (dir) {
     var target
     if (dir === '-=') target = $('.rolodex-item.active').next().get(0)
     if (dir === '+=') target = $('.rolodex-item.active').prev().get(0)
-    manageActiveState('rolodex-item', target)
+    manageActiveState(target)
+  }
+
+  function manageActiveState (target) {
+    $('.rolodex .active').removeClass('active')
+    $(target).addClass('active')
   }
 
   function manageActiveContent () {
     var key = getCurrentDex()
+    $('.rolodex-content .active').removeClass('active')
     var target = $('[data-dex-item="$"]'.replace('$', key))
-    manageActiveState('rolodex-content-item', target)
-    updateActiveContentTitle()
-  }
-
-  function manageActiveState (elClassName, target) {
-    $('.' + elClassName + '.active').removeClass('active')
     $(target).addClass('active')
+    updateActiveContentTitle(key)
   }
 
-  function updateActiveContentTitle () {
-    $('#rolodex-titlebar').text(getCurrentDex())
+  function updateActiveContentTitle (key) {
+    var title = key.toUpperCase().split('-').join(' ')
+    $('#rolodex-titlebar').text(title)
   }
 
   function initialRender () {
     $('.rolodex-item:nth-child(2)').addClass('active')
     $('.rolodex-content-item:nth-child(2)').addClass('active')
     $('.rolodex-item').each(function (i, item) { $(item).css('left', (itemWidth * i) + 'px') })
-    updateActiveContentTitle()
+    updateActiveContentTitle(getCurrentDex())
   }
 }

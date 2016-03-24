@@ -1,8 +1,7 @@
-window.$ = window.jQuery = require('jquery')
+var $ = window.$ = window.jQuery = require('jquery')
 require('bootstrap/dist/js/umd/carousel.js')
 require('bootstrap/dist/js/umd/collapse.js')
 
-var $ = window.$
 var rolodex = require('./rolodex.js')
 $('.carousel-item').first().addClass('active')
 $('#clients-carousel').carousel()

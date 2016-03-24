@@ -88,23 +88,22 @@ html(lang='en')
 
     section.services.bg-primary
       .container.container-restrainer
-        h1.text-uppercase.rolodex-titlebar #{content.servicesH1}:&nbsp;#[span(id='rolodex-titlebar') Some var]
+        h1.text-uppercase.rolodex-titlebar #{content.servicesH1}:&nbsp;#[span(id='rolodex-titlebar')]
         hr
         .rolodex.m-t-3
           .rolodex-inner
             ul.list-inline.rolodex-list
-              each item in content.services
-                li.list-inline-item.rolodex-item
-                  -var slugifiedTitle = item.title.toLowerCase().split(' ').join('-')
-                  +icon(slugifiedTitle)
+              each service in content.services
+                -var title = toSlug(service.title)
+                li.list-inline-item.rolodex-item(data-dex-item='#{title}')
+                  +icon(title)
           a.rolodex-control.left.bg-primary(href='#rolodex' role='button' data-dex='prev')
             +icon('left-arrow-grey')
           a.rolodex-control.right.bg-primary(href='#rolodex' role='button' data-dex='next')
             +icon('right-arrow-grey')
         .rolodex-content.m-y-3
           each service in content.services
-            -var slugifiedTitle = service.title.toLowerCase().split(' ').join('-')
-            p.rolodex-content-item(data-dex-item='#{slugifiedTitle}')=service.copy
+            p.rolodex-content-item(data-dex-item='#{toSlug(service.title)}')=service.copy
     
     section#contact.contact
       .container.container-restrainer
