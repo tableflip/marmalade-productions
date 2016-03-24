@@ -24,7 +24,7 @@ $brand-accent: #DAE0CC;
 $brand-gray: #2E343F;
 $brand-gray-light: #C6B877;
 $enable-rounded: false;
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$font-family-sans-serif: 'NeuzeitGro-Reg', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 $font-family-serif: 'Austin-Roman-Web', Georgia, "Times New Roman", Times, serif;
 $font-size-h1: 1.4rem;
 $headings-font-weight: 400;
@@ -36,7 +36,7 @@ $display1-weight: 500;
 body {
   color: #222;
   text-align:center;
-  font-family: 'NeuzeitGro-Reg';
+  font-family: $font-family-sans-serif;
 }
 hr {
   height: 8px;
