@@ -2,7 +2,8 @@
 	"pageTitle": "Marmalade productions",
 	"jumbotronH1": "Showreel",
 	"jumbotronLead": "Play now",
-	"jumbotronBg": "http://i.dailymail.co.uk/i/pix/2015/02/08/257B2FFC00000578-0-image-m-2_1423432943337.jpg",
+	"jumbotronBg": "http://topnews.in/light/files/David-Beckham_67.jpg",
+	"jumbotronVideo": "https://player.vimeo.com/video/37612340",
 	"aboutH1": "About Marmalade",
 	"aboutLead": "We're an independent film production company based in London.",
 	"aboutCopy": "We produce high quality film and video content for a variety of high end clients and independent organisations, from brand and product footage, to interviews and documentaries.",
@@ -31,16 +32,22 @@
 	"theteamPhone": "0799786772",
 	"servicesH1": "Services",
 	"services": [
-		"brief",
-		"pre-production",
-		"the-shoot",
-		"post-production"
-	],
-	"servicesCopy": [
-		"We'll work with you closely to fully understand your project requirements, from what you want to communicate to the style in which you'd like to do it. We'll then come up with a proposal, budget and time-frame that works for you.",
-		"Pre-Production this is when things get exciting as you'll be involved in rehersals and costum fitting and makeup trials.",
-		"The Shoot - often the most stressful part of film makeing, we are up against the clock and at the mercy of the elements. However this is where the magic happens and somethings, when things come together it is like watching gods hands at play.",
-		"Post production, the editing is the actual crafting of your film, assembing sound and video to create a moving experience that can be shared with countless people."
+		{
+			"title": "Brief",
+			"copy": "We'll work with you closely to fully understand your project requirements, from what you want to communicate to the style in which you'd like to do it. We'll then come up with a proposal, budget and time-frame that works for you."
+		},
+		{
+			"title": "Pre Production",
+			"copy": "Pre-Production this is when things get exciting as you'll be involved in rehersals and costum fitting and makeup trials."
+		},
+		{
+			"title": "The Shoot",
+			"copy": "The Shoot - often the most stressful part of film makeing, we are up against the clock and at the mercy of the elements. However this is where the magic happens and somethings, when things come together it is like watching gods hands at play."
+		},
+		{
+			"title": "Post Production",
+			"copy": "Post production, the editing is the actual crafting of your film, assembing sound and video to create a moving experience that can be shared with countless people."
+		}
 	],
 	"contactH1": "Contact Us",
 	"contactAddress": "**Maramlade Productions**\nUnit 1a JAILmake\nEast Dulwich Road\nLondon. SE22 9BA",

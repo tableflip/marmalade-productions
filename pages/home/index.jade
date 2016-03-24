@@ -9,13 +9,22 @@ html(lang='en')
     .navbar.navbar-light.bg-primary
       .navbar-brand
         +svg('marmalade-logo')
-    .jumbotron.bg-inverse(style="background: url(#{content.jumbotronBg}); background-size:cover; min-height:400px;")
-      h1.font-feature=content.jumbotronH1
-      +icon('dots', 'fill-white')
-      p.lead=content.jumbotronLead
+
+    .jumbotron.bg-inverse
+      .container-video
+        .embed-responsive.embed-responsive-16by9
+          iframe#video.embed-responsive-item(src='#{content.jumbotronVideo}?api=1' webkitallowfullscreen mozallowfullscreen allowfullscreen)
+      .container-lead(style="background: url(#{content.jumbotronBg}); background-size:cover; min-height:400px;")
+        h1.font-feature=content.jumbotronH1
+        +icon('dots', 'fill-white')
+        br
+        #play.lead
+          button.btn.btn-link.white(type='button')=content.jumbotronLead
+          br
+          +icon('down-arrow-white', 'm-t-3')
     .container-fluid.bg-inverse
       a.white(href='#contact') Contact us
-    
+
     section.about
       .container.container-restrainer
         h1.text-uppercase=content.aboutH1
@@ -86,14 +95,16 @@ html(lang='en')
             ul.list-inline.rolodex-list
               each item in content.services
                 li.list-inline-item.rolodex-item
-                  +icon(item)
+                  -var slugifiedTitle = item.title.toLowerCase().split(' ').join('-')
+                  +icon(slugifiedTitle)
           a.rolodex-control.left.bg-primary(href='#rolodex' role='button' data-dex='prev')
             +icon('left-arrow-grey')
           a.rolodex-control.right.bg-primary(href='#rolodex' role='button' data-dex='next')
             +icon('right-arrow-grey')
         .rolodex-content.m-y-3
-          each paragraph, i in content.servicesCopy
-            p.rolodex-content-item(data-dex-item='#{content.services[i]}')=paragraph
+          each service in content.services
+            -var slugifiedTitle = service.title.toLowerCase().split(' ').join('-')
+            p.rolodex-content-item(data-dex-item='#{slugifiedTitle}')=service.copy
     
     section#contact.contact
       .container.container-restrainer
