@@ -1,0 +1,5 @@
+mixin showreel (url)
+  button.close(type='button' aria-label='Close')
+    span.white(aria-hidden='true') &times;
+  .embed-responsive.embed-responsive-16by9
+    iframe.embed-responsive-item(src='#{url.url}?api=1' webkitallowfullscreen mozallowfullscreen allowfullscreen)
