@@ -9,32 +9,31 @@ html(lang='en')
     .navbar.navbar-light.bg-primary
       .navbar-brand
         +svg('marmalade-logo')
-
-    .jumbotron.bg-inverse
-      .container-video
-        .embed-responsive.embed-responsive-16by9
-          iframe#video.embed-responsive-item(src='#{content.jumbotronVideo}?api=1' webkitallowfullscreen mozallowfullscreen allowfullscreen)
-      .container-lead(style="background: url(#{content.jumbotronBg}); background-size:cover; min-height:400px;")
-        h1.font-feature=content.jumbotronH1
-        +icon('dots', 'fill-white')
-        br
-        #play.lead
-          button.btn.btn-link.white(type='button')=content.jumbotronLead
+    .embed-responsive.embed-responsive-16by9
+      iframe#video.embed-responsive-item(src='#{content.jumbotronVideo}?api=1' webkitallowfullscreen mozallowfullscreen allowfullscreen)
+      .container-lead.vert-center.jumbotron.bg-inverse.embed-responsive-item(style="background: url(#{content.jumbotronBg}); background-size:cover;")
+        .vert-center-item
+          h1.font-feature=content.jumbotronH1
+          +icon('dots', 'fill-white svg-icon-lg')
           br
-          +icon('down-arrow-white', 'm-t-3')
-    .container-fluid.bg-inverse
-      a.white(href='#contact') Contact us
+          #play.lead
+            button.btn.btn-link.white(type='button')=content.jumbotronLead
+          .hidden-sm-down.walk-this-way
+            +icon('down-arrow', 'fill-white stroke-white')
+
+    .container-fluid.bg-inverse.contact-us
+      p
+        a.btn.btn-link.grey-light.text-decoration-none(href='#contact') Contact us
 
     section.about
       .container.container-restrainer
-        h1.text-uppercase=content.aboutH1
-        p.display-1.font-feature.m-b-0=content.aboutLead
+        p.display-1.font-feature.m-t-2.m-b-0=content.aboutLead
         hr
         p.text-sm-left.text-md-left=content.aboutCopy
         br
         a(href=content.aboutLinkTarget)=content.aboutLink
         br
-        +icon('down-arrow-grey', 'm-t-1')
+        +icon('down-arrow', 'fill-gray stroke-gray m-t-1')
 
     section.social.bg-primary
       .container.container-restrainer
@@ -66,7 +65,7 @@ html(lang='en')
         a(href=content.clientsLinkTarget)=content.clientsLink
         br
         a(href='#clients-fulllist' data-toggle='collapse' aria-expanded='false' aria-controls='clients-fulllist')
-          +icon('down-arrow-grey', 'm-t-1')
+          +icon('down-arrow', 'fill-gray stroke-gray m-t-1')
         #clients-fulllist.collapse
           p.m-t-1=content.clientsFullList
         
@@ -119,8 +118,9 @@ html(lang='en')
                 +icon('twitter-button')
               li.list-inline-item
                 +icon('vimeo-button')
-    footer.text-xs-center
-      small copyright &#169; 2016 Marmalade Productions
+    footer.text-xs-center.bg-primary.p-y-1
+      small &#169; 2016 Marmalade Productions
 
-    include ../bundle.svg
+    div.svg-bundle
+      include ../bundle.svg
     script(src='#{meta.relativePathToRoot}/bundle.js')

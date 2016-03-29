@@ -5,23 +5,15 @@
  * Then we add all the wonders of bootstrap.
  * Then we import any page specific styles and add global tweaks as required.
  */
- @font-face {
-   font-family: 'NeuzeitGro-Reg';
-   src: url('/fonts/NeuzeitGro-Reg.eot');
-   src: url('/fonts/NeuzeitGro-Reg.eot?#iefix') format('embedded-opentype'),
-   url('/fonts/NeuzeitGro-Reg.woff') format('woff');
- }
- @font-face {
-   font-family: 'Austin-Roman-Web';
-   src: url('/fonts/Austin-Roman-Web.eot');
-   src: url('/fonts/Austin-Roman-Web.eot?#iefix') format('embedded-opentype'),
-   url('/fonts/Austin-Roman-Web.woff') format('woff');
- }
+
+@import './fonts';
+
 // override boostrap with our custom vars
 // See `node_modules/bootstrap/scss/_variables.scss` for more options
 $brand-primary: #F4E17B !default;
 $brand-accent: #DAE0CC;
 $brand-gray: #2E343F;
+$gray-light: #9D9D9C;
 $brand-gray-light: #C6B877;
 $enable-rounded: false;
 $font-family-sans-serif: 'NeuzeitGro-Reg', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -30,13 +22,16 @@ $font-size-h1: 1.4rem;
 $headings-font-weight: 400;
 $display1-size: 2.4rem;
 $display1-weight: 500;
+$link-color: $brand-gray;
+$link-decoration: underline;
+$link-hover-color: darken($link-color, 15%);
+$link-hover-decoration: underline;
 
 @import 'bootstrap/scss/bootstrap';
 
 body {
   color: #222;
   text-align:center;
-  font-family: $font-family-sans-serif;
 }
 hr {
   height: 8px;
@@ -58,8 +53,19 @@ p {
     color: $body-color !important;
   }
 }
-.white {
+.bg-inverse {
+  a {
+    color: $gray-light;
+  }
+}
+.text-decoration-none {
+  text-decoration:none;
+}
+.white, .white:hover {
   color: white;
+}
+.grey-light, .grey-light:hover {
+  color: $gray-light;
 }
 .fill-white {
   fill: white;
@@ -67,8 +73,11 @@ p {
 .stroke-white {
   stroke: white;
 }
-.white {
-  color: white;
+.fill-gray {
+  fill: $brand-gray;
+}
+.stroke-gray {
+  stroke: $brand-gray;
 }
 .svg-icon {
   vertical-align: middle;
@@ -81,72 +90,87 @@ p {
     height: 100%;
   }
 }
+.svg-icon-lg {
+  width: 3em;
+  height: 3em;
+}
+.svg-icon-dots {
+  width: 2em;
+  height: 1em;
+}
+.svg-icon-dots.svg-icon-lg {
+  width: 3em;
+  height: 2em;
+}
+.svg-bundle {
+  overflow:hidden;
+  position:absolute;
+  height:0;
+  bottom:0;
+}
 .container-restrainer {
   margin: auto;
   padding: 2rem 1rem;
   max-width: map-get($container-max-widths, md);
 }
+.navbar {
+  padding:10px 18px;
+}
 .navbar-brand {
+  font-size:18px;
+  padding:0px 10px 0px 0;
   svg {
     width: 141px;
     height: 30px;
     vertical-align: middle;
   }
 }
-
 .font-feature {
   font-family: $font-family-serif;
 }
-
+.embed-responsive {
+  background:black;
+}
+.vert-center:before {
+  content:"";
+  height:100%;
+  display:inline-block;
+  margin-right:-1px;
+  width:1px;
+  vertical-align:middle;
+  user-select: none;
+}
+.vert-center-item {
+  display:inline-block;
+  vertical-align:middle;
+}
 .page-home {
-  .jumbotron {
-    position: relative;
-    background-color: black;
-    height: 400px;
-    max-height: 400px;
-    margin: 0;
+  .container-lead {
+    opacity: 1;
+    transition: opacity 0.8s;
+  }
+  .container-lead.fade {
+    opacity: 0;
+  }
+  .container-lead.gone {
+    opacity: 0;
     padding: 0;
+    height: 0;
+    overflow:hidden;
+  }
+  .jumbotron {
     h1 {
-      padding-top: 4rem;
-      font-size: 4rem;
+      font-size: 3rem;
+      margin-bottom:0;
     }
     hr {
       color: white;
     }
-    .container-lead {
-      height: 100%;
-      width: 100%;
-      opacity: 1;
-      transition: opacity 1s;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      padding: 1rem;
-    }
-    .container-lead.video-playing {
-      opacity: 0;
-    }
-    .container-video {
-      display: none;
-      background-color: black;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      .embed-responsive {
-        position: static;
-      }
-    }
-    .container-video::after {
-      content: 'close';
-      color: $brand-primary;
-      opacity: 0.5;
-      position: absolute;
-      bottom: -1.5rem;
-      right: 12px;
+    .walk-this-way {
+      position:absolute;
+      bottom: 80px;
+      left:0;
+      width:100%;
     }
   }
   .clients {
@@ -185,28 +209,26 @@ p {
   }
 }
 @include media-breakpoint-up(md) {
-  .home-page {
-    .jumbotron {
-      h1 {
-        font-size: 4rem;
-      }
-    }
+  .page-home .jumbotron h1 {
+    font-size: 4rem;
+    margin-top: -100px;
   }
 }
 
+
 // Repsonsive type a la http://v4-alpha.getbootstrap.com/content/typography/#responsive-typography
 html {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 @include media-breakpoint-up(md) {
   html {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
 @include media-breakpoint-up(lg) {
   html {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
