@@ -2113,7 +2113,7 @@ p { margin: 0 auto; }
 
 .container-restrainer { margin: auto; padding: 2rem 1rem; max-width: 720px; }
 
-.navbar-brand svg { width: 141px; height: 30px; }
+.navbar-brand svg { width: 141px; height: 30px; vertical-align: middle; }
 
 .font-feature { font-family: "Austin-Roman-Web", Georgia, "Times New Roman", Times, serif; }
 
