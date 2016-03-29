@@ -193,3 +193,20 @@ p {
     }
   }
 }
+
+// Repsonsive type a la http://v4-alpha.getbootstrap.com/content/typography/#responsive-typography
+html {
+  font-size: 16px;
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 20px;
+  }
+}
