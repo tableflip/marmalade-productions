@@ -6,22 +6,24 @@ var $ = window.$
 $('.carousel-item').first().addClass('active')
 $('#clients-carousel').carousel()
 
-$('#play').on('click', function (e) {
-  e.preventDefault()
-  $('.container-lead').addClass('video-playing')
-  $('.container-video').show().on('click', stopVideo)
-  player('play')
-})
+$('#play').on('click', startVideo)
+$('body').on('click', stopVideo)
 
-function removeStopVideo () {
-  $('.container-video').off('click', stopVideo)
+function startVideo (e) {
+  e.preventDefault()
+  e.stopPropagation()
+  player('play')
+  $('.container-lead').addClass('fade').one('transitionend', function (evt) {
+    $(this).addClass('gone')
+  })
 }
 
 function stopVideo () {
-  $('.container-lead').removeClass('video-playing')
-  $('.container-video').hide()
-  player('unload')
-  removeStopVideo()
+  var $lead = $('.container-lead')
+  if (!$lead.hasClass('gone')) return
+  $('.container-lead').removeClass('gone fade').one('transitionend', function (evt) {
+    player('unload')
+  })
 }
 
 function player (opt) {
