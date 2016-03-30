@@ -203,9 +203,19 @@ p {
     }
   }
   .contact {
-    .list-group-horizontal {
-      width: 8.5rem;
+    .list-inline {
+      .svg-icon {
+        margin: 0;
+      }
     }
+    .svg-icon-dots {
+      margin-left: 0;
+    }
+  }
+}
+@include media-breakpoint-up(sm) {
+  .contact {
+    text-align: left;
   }
 }
 @include media-breakpoint-up(md) {
