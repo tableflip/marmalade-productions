@@ -13,6 +13,10 @@ var md = require('markdown-it')({
 
 var inputDir = path.normalize(path.join(__dirname, '..', 'pages'))
 var outputDir = path.normalize(path.join(__dirname, '..', 'dist'))
+var toSlug = function (string) {
+  string = string.toString()
+  return string.toLowerCase().split(' ').join('-')
+}
 
 find.file(/\index.jade$/, inputDir, (files) => {
   var tasks = files.map((tpl) => {
@@ -39,6 +43,7 @@ find.file(/\index.jade$/, inputDir, (files) => {
       meta: task.meta,
       content: require(task.content),
       md: md,
+      toSlug: toSlug,
       facts: require('../facts.json'),
       pretty: true
     }

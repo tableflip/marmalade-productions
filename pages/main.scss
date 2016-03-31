@@ -18,7 +18,7 @@ $brand-gray-light: #C6B877;
 $enable-rounded: false;
 $font-family-sans-serif: 'NeuzeitGro-Reg', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 $font-family-serif: 'Austin-Roman-Web', Georgia, "Times New Roman", Times, serif;
-$font-size-h1: 1.4rem;
+$font-size-h1: 1.1rem;
 $headings-font-weight: 400;
 $display1-size: 2.4rem;
 $display1-weight: 500;
@@ -30,13 +30,17 @@ $link-hover-decoration: underline;
 @import 'bootstrap/scss/bootstrap';
 
 body {
+  letter-spacing: 1px;
   color: #222;
   text-align:center;
 }
 hr {
   height: 8px;
   border: 0;
-  background: url('data:image/svg+xml;uft8,<svg width="37" height="8" viewBox="0 0 37 8" xmlns="http://www.w3.org/2000/svg"><title>Group</title><g fill-rule="evenodd"><ellipse cx="4" cy="4" rx="4" ry="4"/><ellipse cx="18.4" cy="4" rx="4" ry="4"/><ellipse cx="32.8" cy="4" rx="4" ry="4"/></g></svg>') no-repeat top center;
+  background: url('data:image/svg+xml;uft8,<svg width="37" height="8" viewBox="0 0 37 8" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><ellipse cx="4" cy="4" rx="4" ry="4"/><ellipse cx="18.4" cy="4" rx="4" ry="4"/><ellipse cx="32.8" cy="4" rx="4" ry="4"/></g></svg>') no-repeat center center;
+}
+hr.left {
+  background-position: left center;
 }
 p {
   margin: 0 auto;
@@ -130,6 +134,14 @@ footer {
     vertical-align: middle;
   }
 }
+
+.opacity-half {
+  opacity: 0.2;
+}
+.carousel-control.left, .carousel-control.right {
+  background-image: none;
+}
+
 .font-feature {
   font-family: $font-family-serif;
 }
@@ -149,6 +161,7 @@ footer {
   display:inline-block;
   vertical-align:middle;
 }
+
 .page-home {
   .container-lead {
     opacity: 1;
@@ -178,6 +191,7 @@ footer {
       width:100%;
     }
   }
+
   .clients {
     .carousel {
       height: 300px;
@@ -186,11 +200,8 @@ footer {
       .carousel-item {
         height: 300px;
         background-repeat: no-repeat;
-        background-size: 70% auto;
+        background-size: 65% auto;
         background-position: center center;
-      }
-      .carousel-control.left, .carousel-control.right {
-        background-image: none;
       }
       .carousel-icons {
         position: absolute;
@@ -200,11 +211,62 @@ footer {
       .right .carousel-icons { right: 0; }
     }
   }
+
   .services {
-    #brief {
-      width: 109px;
-      height: auto;
-      margin: auto;
+    $unit-size: 4rem;
+    .rolodex {
+      height: $unit-size;
+      position: relative;
+      .rolodex-control {
+        height: 100%;
+        position: absolute;
+        padding-top: 16px;
+        top: 0;
+      }
+      .left {left: 0;}
+      .right {right: 0;}
+      .rolodex-inner {
+        height: 100%;
+        width: $unit-size * 3.6;
+        margin: auto;
+        overflow: hidden;
+        .rolodex-list {
+          white-space: nowrap;
+          position: relative;
+          top: 0;
+          left: 0;
+          margin-bottom: 0;
+        }
+        .rolodex-item {
+          position: absolute;
+          top: 0;
+          opacity: 0.2;
+        }
+        .rolodex-item.active {
+          opacity: 1;
+          transition: opacity 1.5s;
+        }
+        .svg-icon {
+          width: $unit-size;
+          height: $unit-size;
+        }
+      }
+    }
+    .rolodex-content {
+      height: $unit-size * 1.5;
+      .rolodex-content-item {
+        height: 0;
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+      .rolodex-content-item.active {
+        opacity: 1;
+        transition: opacity 0.5s;
+      }
+      p {
+        position: relative;
+        top: 0; left: 0;
+      }
     }
   }
   .contact {
@@ -227,6 +289,18 @@ footer {
   .page-home .jumbotron h1 {
     font-size: 4rem;
     margin-top: -100px;
+  }
+  .page-home {
+    .services {
+      .rolodex {
+        .rolodex-inner {
+          width: 16.9rem;
+        }
+        .rolodex-item {
+          width: 6rem;
+        }
+      }
+    }
   }
 }
 
