@@ -119,10 +119,22 @@ html(lang='en')
               li.list-inline-item
                 +icon('vimeo-button')
           .col-xs-6.text-xs-right
-            a(href='#video') Back to the top
-            +icon('up-arrow-gray')
+            .hidden-sm-down
+              a(href='#video').back-to-top Back to the top
+                +icon('up-arrow-grey')
+            .hidden-md-up
+              a(href='#video').back-to-top
+                small Back to the top
+                +icon('up-arrow-grey')
+
     footer.text-xs-center.bg-primary.p-y-1
-      small &#169; 2016 Marmalade Productions
+      ul.list-inline
+        li.list-inline-item
+          &#169; 2016 Marmalade Productions
+        li.list-inline-item
+          a(href='/terms') T&amp;Cs
+        li.list-inline-item
+          a(href='/disclaimer') Disclaimer
 
     div.svg-bundle
       include ../bundle.svg
