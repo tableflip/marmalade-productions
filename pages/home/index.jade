@@ -110,7 +110,7 @@ html(lang='en')
             -var mapuri = "https://maps.googleapis.com/maps/api/staticmap?center=51.4615700,-0.068100&zoom=15&size=400x400&scale=2&maptype=roadmap&markers=color:0xF4E17B%7Cmarkers=size:mid%7C"+content.contactLocation[0]+","+content.contactLocation[1]+"&key=AIzaSyAGfaHukFFe0Mq0SUsfenwBMU9frvLZiyk"
             img.img-fluid(src=mapuri)
         .row.m-t-3
-          .col-xs-6.text-xs-left
+          .col-xs-12.col-sm-6.text-sm-left
             ul.list-inline
               li.list-inline-item
                 +icon('facebook-button')
@@ -118,14 +118,11 @@ html(lang='en')
                 +icon('twitter-button')
               li.list-inline-item
                 +icon('vimeo-button')
-          .col-xs-6.text-xs-right
-            .hidden-sm-down
-              a(href='#video').back-to-top Back to the top
-                +icon('up-arrow-grey')
-            .hidden-md-up
-              a(href='#video').back-to-top
-                small Back to the top
-                +icon('up-arrow-grey')
+          .col-xs-12.text-center.hidden-sm-up
+            +icon('up-arrow-grey')
+          .col-xs-12.col-sm-6.text-sm-right.p-t-1
+            a(href='#video').back-to-top Back to the top
+              +icon('up-arrow-grey', 'hidden-sm-down')
 
     footer.text-xs-center.bg-primary.p-y-1
       ul.list-inline
