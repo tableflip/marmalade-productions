@@ -205,7 +205,7 @@ p {
   }
 
   .services {
-    $unit-size: 64px;
+    $unit-size: 4rem;
     .rolodex {
       height: $unit-size;
       position: relative;
@@ -271,6 +271,18 @@ p {
   .page-home .jumbotron h1 {
     font-size: 4rem;
     margin-top: -100px;
+  }
+  .page-home {
+    .services {
+      .rolodex {
+        .rolodex-inner {
+          width: 16.9rem;
+        }
+        .rolodex-item {
+          width: 6rem;
+        }
+      }
+    }
   }
 }
 
