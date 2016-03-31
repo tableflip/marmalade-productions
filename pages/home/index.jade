@@ -68,23 +68,36 @@ html(lang='en')
           +icon('down-arrow', 'fill-gray stroke-gray m-t-1')
         #clients-fulllist.collapse
           p.m-t-1=content.clientsFullList
-        
-    section.team
-      .container.container-restrainer
-        h1.text-uppercase=content.theteamH1
-        hr
-        .container.p-x-0
-          .row
-            .col-sm-5
-              img.img-fluid(src='#{content.theteamMugshot}' alt='#{content.theteamName}')
-            .col-sm-7.text-sm-left
-              p=content.theteamName
-              p=content.theteamCopy
-                br
-                a(href='mailto:#{content.theteamEmailLink}')=content.theteamEmail
-                br
-                a(href='tel:#{content.theteamPhone}')=content.theteamPhone
 
+    section#team.team
+      .container.container-restrainer
+        h1.text-uppercase Meet The Team
+        hr
+        #team-carousel.carousel.slide.m-y-1(data-ride='carousel' data-interval='9999999')
+          .carousel-inner(role='listbox')
+            each member in content.team
+              .carousel-item
+                .container
+                  .row
+                    .col-xs-12
+                      .team-member-photo.m-b-1(style='background-image: url(#{member.mugshot})')
+                    .col-xs-12
+                      ul.list-group
+                        li.list-group-item=member.name
+                        li.list-group-item=member.role
+                        li.list-group-item=member.phone
+                        li.list-group-item
+                          a(href='mailto:#{member.email}') Email Me
+                      
+          a.left.carousel-control(href='#team-carousel' role='button' data-slide='prev')
+            +icon('left-arrow-grey', 'carousel-icons')
+            span.sr-only Previous client
+          a.right.carousel-control(href='#team-carousel' role='button' data-slide='next')
+            +icon('right-arrow-grey', 'carousel-icons')
+            span.sr-only Previous client
+          ol.carousel-indicators
+            each member, i in content.team
+              li.carousel-indicator(data-target='#team-carousel' data-slide-to='#{i}')
     section.services.bg-primary
       .container.container-restrainer
         h1.text-uppercase=content.servicesH1
