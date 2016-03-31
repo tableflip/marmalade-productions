@@ -18,10 +18,10 @@ html(lang='en')
           br
           #play.lead
             button.btn.btn-link.white(type='button')=content.jumbotronLead
-          .hidden-sm-down.walk-this-way
+          a(href='#about').hidden-sm-down.walk-this-way
             +icon('down-arrow', 'fill-white stroke-white')
 
-    .container-fluid.bg-inverse.contact-us
+    .container-fluid.bg-inverse.contact-us#about
       p
         a.btn.btn-link.grey-light.text-decoration-none(href='#contact') Contact us
 
@@ -69,7 +69,7 @@ html(lang='en')
         #clients-fulllist.collapse
           p.m-t-1=content.clientsFullList
         
-    section.team
+    section#team.team
       .container.container-restrainer
         h1.text-uppercase=content.theteamH1
         hr
@@ -108,20 +108,24 @@ html(lang='en')
       .container.container-restrainer
         .row.m-b-1
           .col-sm-5
-            h1.text-uppercase=content.contactH1
-            hr
+            h1.text-sm-left.text-uppercase=content.contactH1
+            hr.left.hidden-xs-down
+            hr.hidden-sm-up
             .text-sm-left
               !=md.render(content.contactAddress)
             p.text-sm-left.m-b-1
               br
-              a(href='mailto:#{content.contactEmailLink}')=content.contactEmail
+              a(href='tel:#{content.contactPhone}').text-decoration-none=content.contactPhone
               br
-              a(href='tel:#{content.contactPhone}')=content.contactPhone
+              a(href='mailto:#{content.contactEmailLink}').text-decoration-none=content.contactEmail
           .col-sm-7
-            -var mapuri = "https://maps.googleapis.com/maps/api/staticmap?center=51.4615700,-0.068100&zoom=15&size=400x300&scale=2&maptype=roadmap&markers=color:0xF4E17B%7Cmarkers=size:mid%7C"+content.contactLocation[0]+","+content.contactLocation[1]+"&key=AIzaSyAGfaHukFFe0Mq0SUsfenwBMU9frvLZiyk"
-            img.img-fluid(src=mapuri)
+            -var coords = content.contactLocation[0]+","+content.contactLocation[1]
+            -var mapuri = 'https://maps.googleapis.com/maps/api/staticmap?center='+coords+'&zoom=15&size=400x300&scale=2&maptype=roadmap&markers=color:0xF4E17B%7Cmarkers=size:mid%7C'+coords+'&key=AIzaSyAGfaHukFFe0Mq0SUsfenwBMU9frvLZiyk'
+
+            a(href='https://www.google.co.uk/maps/place/' + coords + '/@' + coords + ',15z')
+              img.img-fluid(src=mapuri)
         .row.m-t-3
-          .col-xs-12
+          .col-xs-12.col-sm-6.text-sm-left
             ul.list-inline
               li.list-inline-item
                 +icon('facebook-button')
@@ -129,8 +133,20 @@ html(lang='en')
                 +icon('twitter-button')
               li.list-inline-item
                 +icon('vimeo-button')
+          .col-xs-12.text-center.hidden-sm-up
+            +icon('up-arrow-grey')
+          .col-xs-12.col-sm-6.text-sm-right.p-t-1
+            a(href='#video').text-decoration-none.back-to-top Back to the top
+              +icon('up-arrow-grey', 'hidden-sm-down')
+
     footer.text-xs-center.bg-primary.p-y-1
-      small &#169; 2016 Marmalade Productions
+      ul.list-inline
+        li.list-inline-item &#169; 2016 Marmalade Productions
+        // pending page content from marmalade productions
+        //- li.list-inline-item
+        //-   a(href='/terms').text-decoration-none T&amp;Cs
+        //- li.list-inline-item
+        //-   a(href='/disclaimer').text-decoration-none Disclaimer
 
     div.svg-bundle
       include ../bundle.svg

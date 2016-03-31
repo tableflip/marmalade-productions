@@ -37,7 +37,10 @@ body {
 hr {
   height: 8px;
   border: 0;
-  background: url('data:image/svg+xml;uft8,<svg width="37" height="8" viewBox="0 0 37 8" xmlns="http://www.w3.org/2000/svg"><title>Group</title><g fill-rule="evenodd"><ellipse cx="4" cy="4" rx="4" ry="4"/><ellipse cx="18.4" cy="4" rx="4" ry="4"/><ellipse cx="32.8" cy="4" rx="4" ry="4"/></g></svg>') no-repeat top center;
+  background: url('data:image/svg+xml;uft8,<svg width="37" height="8" viewBox="0 0 37 8" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><ellipse cx="4" cy="4" rx="4" ry="4"/><ellipse cx="18.4" cy="4" rx="4" ry="4"/><ellipse cx="32.8" cy="4" rx="4" ry="4"/></g></svg>') no-repeat center center;
+}
+hr.left {
+  background-position: left center;
 }
 p {
   margin: 0 auto;
@@ -262,9 +265,19 @@ p {
     }
   }
   .contact {
-    .list-group-horizontal {
-      width: 8.5rem;
+    .list-inline {
+      .svg-icon {
+        margin: 0;
+      }
     }
+    .svg-icon-dots {
+      margin-left: 0;
+    }
+  }
+}
+@include media-breakpoint-up(sm) {
+  .contact {
+    text-align: left;
   }
 }
 @include media-breakpoint-up(md) {
