@@ -29,8 +29,25 @@
 	"theteamEmail": "email Sherlock",
 	"theteamEmailLink": "sherlock@bakerstreet.gov",
 	"theteamPhone": "0799786772",
-	"servicesH1": "Servies: The Brief",
-	"servicesCopy": "We'll work with you closely to fully understand your project requirements, from what you want to communicate to the style in which you'd like to do it. We'll then come up with a proposal, budget and time-frame that works for you.",
+	"servicesH1": "Services",
+	"services": [
+		{
+			"title": "Brief",
+			"copy": "We'll work with you closely to fully understand your project requirements, from what you want to communicate to the style in which you'd like to do it. We'll then come up with a proposal, budget and time-frame that works for you."
+		},
+		{
+			"title": "Pre Production",
+			"copy": "Pre-Production this is when things get exciting as you'll be involved in rehersals and costum fitting and makeup trials."
+		},
+		{
+			"title": "The Shoot",
+			"copy": "The Shoot - often the most stressful part of film makeing, we are up against the clock and at the mercy of the elements. However this is where the magic happens and somethings, when things come together it is like watching gods hands at play."
+		},
+		{
+			"title": "Post Production",
+			"copy": "Post production, the editing is the actual crafting of your film, assembing sound and video to create a moving experience that can be shared with countless people."
+		}
+	],
 	"contactH1": "Contact Us",
 	"contactAddress": "**Maramlade Productions**\nUnit 1a JAILmake\nEast Dulwich Road\nLondon. SE22 9BA",
 	"contactEmail": "email us",
