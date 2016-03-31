@@ -193,7 +193,7 @@ p {
     .left .carousel-icons { left: 0; }
     .right .carousel-icons { right: 0; }
     .carousel-indicators {
-      bottom: 0;
+      bottom: -24px;
       margin-bottom: 0;
     }
     .carousel-indicator {
@@ -208,32 +208,33 @@ p {
   }
   .team {
     .carousel {
-      height: 370px;
+      height: auto;
     }
     .team-member-photo {
       position: relative;
-      height: 11rem;
-      width: 60%;
+      padding: 1rem;
       margin: auto;
+      max-width: 240px;
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 80% auto;
       border: solid 3px $brand-primary;
       .label {
         position: absolute;
+        font-size: 1rem;
         &.label-default {
           background-color: white;
           color: $brand-gray;
         }
         &.name {
-          bottom: -12px;
-          right: 12px;
+          bottom: -0.8rem;
+          right: 1rem;
         }
         &.role {
           transform: rotate(270deg);
           transform-origin: 0% 100%;
-          left: 10px;
-          top: 5.5rem;
+          left: 0.7rem;
+          top: 7rem;
         }
       }
     }

@@ -80,7 +80,8 @@ html(lang='en')
                 .container
                   .row
                     .col-xs-12
-                      .team-member-photo.m-b-1(style='background-image: url(#{member.mugshot})')
+                      .team-member-photo.m-b-1
+                        img.img-fluid(src='#{member.mugshot}')
                         span.label.label-default.role=member.role
                         span.label.label-default.name=member.name
                     .col-xs-12
