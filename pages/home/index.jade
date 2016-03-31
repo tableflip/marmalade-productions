@@ -81,6 +81,8 @@ html(lang='en')
                   .row
                     .col-xs-12
                       .team-member-photo.m-b-1(style='background-image: url(#{member.mugshot})')
+                        span.label.label-default.role=member.role
+                        span.label.label-default.name=member.name
                     .col-xs-12
                       ul.list-group
                         li.list-group-item=member.name

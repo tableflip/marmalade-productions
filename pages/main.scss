@@ -211,6 +211,7 @@ p {
       height: 370px;
     }
     .team-member-photo {
+      position: relative;
       height: 11rem;
       width: 60%;
       margin: auto;
@@ -218,6 +219,23 @@ p {
       background-position: center center;
       background-size: 80% auto;
       border: solid 3px $brand-primary;
+      .label {
+        position: absolute;
+        &.label-default {
+          background-color: white;
+          color: $brand-gray;
+        }
+        &.name {
+          bottom: -12px;
+          right: 12px;
+        }
+        &.role {
+          transform: rotate(270deg);
+          transform-origin: 0% 100%;
+          left: 10px;
+          top: 5.5rem;
+        }
+      }
     }
     .list-group-item {
       border: none;
