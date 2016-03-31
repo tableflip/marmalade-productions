@@ -16,7 +16,7 @@
   "clientsFullList": { "type": "textarea" },
   "theteamMugshot": { "type": "img" },
   "theteamCopy": { "type": "textarea" },
-  "servicesCopy": { "type": "textarea" },
+  "services": { "type": "objectlist" },
   "contactAddress": { "type": "textarea" },
   "contactLocation": { "type": "map" }
 }
