@@ -209,6 +209,13 @@ p {
   .team {
     .carousel {
       height: auto;
+      .carousel-item {
+        min-height: 380px;
+        margin: 0 3rem;
+      }
+      .carousel-control {
+        background-color: white;
+      }
     }
     .team-member-photo {
       position: relative;
@@ -240,7 +247,6 @@ p {
     }
     .list-group-item {
       border: none;
-      text-align: center;
       padding: 0.1rem;
     }
   }
