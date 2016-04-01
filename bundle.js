@@ -10895,12 +10895,6 @@ require('bootstrap/dist/js/umd/carousel.js')
 require('bootstrap/dist/js/umd/collapse.js')
 require('./rolodex.js')()
 
-$('#clients-carousel .carousel-item').first().addClass('active')
-$('#clients-carousel').carousel()
-$('#team-carousel .carousel-item').first().addClass('active')
-$('#team-carousel .carousel-indicator').first().addClass('active')
-$('#team-carousel').carousel()
-
 $('#play').on('click', startVideo)
 $('body').on('click', stopVideo)
 

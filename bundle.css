@@ -2117,6 +2117,12 @@ p { margin: 0 auto; }
 
 .stroke-gray { stroke: #2E343F; }
 
+.rotate180 { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+
+.rotate90 { -webkit-transform: rotate(90deg); transform: rotate(90deg); }
+
+.rotate-90 { -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }
+
 .svg-icon { vertical-align: middle; display: inline-block; width: 2em; height: 2em; margin: 0 .4em; }
 
 .svg-icon svg { width: 100%; height: 100%; }
