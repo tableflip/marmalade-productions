@@ -79,15 +79,15 @@ html(lang='en')
               .carousel-item
                 .container
                   .row
-                    .col-xs-12.col-sm-7
+                    .col-xs-12.col-md-7
                       .team-member-photo.m-b-1
-                        img.img-fluid(src='#{member.mugshot}')
+                        .photo-frame(style='background-image: url(#{member.mugshot})')
                         span.label.label-default.role=member.role
                         span.label.label-default.name=member.name.split(' ')[0]
-                    .col-xs-12.col-sm-5
-                      ul.list-group.text-center.text-sm-left
-                        li.list-group-item.hidden-xs-down=member.name
-                        li.list-group-item.hidden-xs-down=member.role
+                    .col-xs-12.col-md-5
+                      ul.list-group.text-center.text-md-left
+                        li.list-group-item.hidden-sm-down=member.name
+                        li.list-group-item.hidden-sm-down=member.role
                         li.list-group-item=member.phone
                         li.list-group-item
                           a(href='mailto:#{member.email}') Email Me
