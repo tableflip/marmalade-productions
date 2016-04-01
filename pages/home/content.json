@@ -22,9 +22,10 @@
 	"clientsFullList": "Nasa - Bit of text about nasa and what it was like to go into space with them, FedEx, Starbucks, Ikea, and many more ...",
 	"clientsLink": "Full List of Clients",
 	"clientsLinkTarget": "#clients",
+	"teamH1": "Meet The Team",
 	"team": [
 		{
-			"name": "Stuart Everate",
+			"name": "Stuart Everitt",
 			"role": "Director",
 			"mugshot": "http://www.phon.ucl.ac.uk/home/stuart/images/4473cropped20p.jpg",
 			"phone": "079448475753",

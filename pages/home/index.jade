@@ -71,7 +71,7 @@ html(lang='en')
 
     section#team.team
       .container.container-restrainer
-        h1.text-uppercase Meet The Team
+        h1.text-uppercase=content.teamH1
         hr
         #team-carousel.carousel.slide.m-t-1(data-ride='carousel' data-interval='9999999')
           .carousel-inner(role='listbox')
@@ -155,14 +155,9 @@ html(lang='en')
             a(href='#video').text-decoration-none.back-to-top Back to the top
               +icon('up-arrow-grey', 'hidden-sm-down')
 
-    footer.text-xs-center.bg-primary.p-y-1
-      ul.list-inline
-        li.list-inline-item &#169; 2016 Marmalade Productions
-        // pending page content from marmalade productions
-        //- li.list-inline-item
-        //-   a(href='/terms').text-decoration-none T&amp;Cs
-        //- li.list-inline-item
-        //-   a(href='/disclaimer').text-decoration-none Disclaimer
+    footer.text-xs-center.bg-primary
+      p.p-y-1 
+        small &#169; 2016 Marmalade Productions
 
     div.svg-bundle
       include ../bundle.svg
