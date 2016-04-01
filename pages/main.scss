@@ -187,7 +187,6 @@ p {
     }
   }
   .carousel {
-    height: 300px;
     max-width: 789px;
     margin: auto;
     .carousel-item {
@@ -206,8 +205,10 @@ p {
     .left .carousel-icons { left: 0; }
     .right .carousel-icons { right: 0; }
     .carousel-indicators {
-      bottom: -24px;
-      margin-bottom: 0;
+      position: static;
+      bottom: 0;
+      margin: 0;
+      width: 100%;
     }
     .carousel-indicator {
       border-color: $brand-gray;
@@ -220,28 +221,22 @@ p {
     }
   }
   .team {
-    .carousel {
-      height: auto;
-      .carousel-item {
-        min-height: 380px;
-        margin: 0 3rem;
-      }
-      .carousel-control {
-        background-color: white;
-      }
+    .carousel-inner {
+      width: 80%;
+      margin: auto;
+      min-height: 400px;
     }
     .team-member-photo {
       position: relative;
       padding: 1rem;
-      margin: auto;
-      max-width: 240px;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 80% auto;
       border: solid 3px $brand-primary;
+      width: 80%;
+      max-height: 315px;
+      margin: auto;
       .label {
         position: absolute;
-        font-size: 1rem;
+        font-family: $font-family-sans-serif;
+        font-size: 0.8rem;
         &.label-default {
           background-color: white;
           color: $brand-gray;
@@ -333,8 +328,15 @@ p {
   }
 }
 @include media-breakpoint-up(sm) {
-  .contact {
-    text-align: left;
+  .page-home {
+    .contact {
+      text-align: left;
+    }
+    .team {
+      .team-member-photo {
+        width: 100%;
+      }
+    }
   }
 }
 @include media-breakpoint-up(md) {
@@ -343,6 +345,9 @@ p {
     margin-top: -100px;
   }
   .page-home {
+    .team {
+
+    }
     .services {
       .rolodex {
         .rolodex-inner {
@@ -352,6 +357,14 @@ p {
           width: 6rem;
         }
       }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .page-home {
+    .team {
+
     }
   }
 }
