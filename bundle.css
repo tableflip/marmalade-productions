@@ -2161,15 +2161,41 @@ p { margin: 0 auto; }
 
 .page-home .jumbotron .walk-this-way { position: absolute; bottom: 80px; left: 0; width: 100%; }
 
-.page-home .clients .carousel { height: 300px; max-width: 789px; margin: auto; }
+.page-home .carousel { max-width: 789px; margin: auto; }
 
-.page-home .clients .carousel .carousel-item { height: 300px; background-repeat: no-repeat; background-size: 65% auto; background-position: center center; }
+.page-home .carousel .carousel-item { height: 300px; background-repeat: no-repeat; background-size: 70% auto; background-position: center center; }
 
-.page-home .clients .carousel .carousel-icons { position: absolute; top: 135px; }
+.page-home .carousel .carousel-control.left, .page-home .carousel .carousel-control.right { background-image: none; }
 
-.page-home .clients .carousel .left .carousel-icons { left: 0; }
+.page-home .carousel .carousel-icons { position: absolute; top: 135px; }
 
-.page-home .clients .carousel .right .carousel-icons { right: 0; }
+.page-home .carousel .left .carousel-icons { left: 0; }
+
+.page-home .carousel .right .carousel-icons { right: 0; }
+
+.page-home .carousel .carousel-indicators { position: static; bottom: 0; margin: 0; width: 100%; }
+
+.page-home .carousel .carousel-indicator { border-color: #2E343F; }
+
+.page-home .carousel .carousel-indicator.active { background-color: #2E343F; width: 10px; height: 10px; margin: 1px; }
+
+.page-home .team .carousel-control { background-color: white; opacity: 1; }
+
+.page-home .team .carousel-inner { width: 80%; margin: auto; min-height: 19rem; }
+
+.page-home .team .team-member-photo { position: relative; padding: 1rem; border: solid 3px #F5E274; width: 10rem; height: 14rem; margin: auto; }
+
+.page-home .team .team-member-photo .label { position: absolute; font-family: "NeuzeitGro-Reg", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; font-size: 0.8rem; }
+
+.page-home .team .team-member-photo .label.label-default { background-color: white; color: #2E343F; }
+
+.page-home .team .team-member-photo .label.name { bottom: -0.8rem; right: 1rem; }
+
+.page-home .team .team-member-photo .label.role { -webkit-transform: rotate(270deg); transform: rotate(270deg); -webkit-transform-origin: 0% 100%; transform-origin: 0% 100%; left: 0.7rem; top: 7rem; }
+
+.page-home .team .team-member-photo .photo-frame { display: block; max-width: 100%; height: 100%; background-repeat: no-repeat; background-position: center center; background-size: cover; }
+
+.page-home .team .list-group-item { border: none; padding: 0.1rem; }
 
 .page-home .services .rolodex { height: 4rem; position: relative; }
 
@@ -2201,11 +2227,13 @@ p { margin: 0 auto; }
 
 .page-home .contact .svg-icon-dots { margin-left: 0; }
 
-@media (min-width: 544px) { .contact { text-align: left; } }
+@media (min-width: 544px) { .page-home .contact { text-align: left; } }
 
 @media (min-width: 768px) { .page-home .jumbotron h1 { font-size: 4rem; margin-top: -100px; }
   .page-home .services .rolodex .rolodex-inner { width: 16.9rem; }
   .page-home .services .rolodex .rolodex-item { width: 6rem; } }
+
+@media (min-width: 992px) { .page-home .team .carousel-inner { min-height: 16rem; } }
 
 html { font-size: 18px; }
 
