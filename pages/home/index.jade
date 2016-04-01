@@ -1,12 +1,18 @@
 include ../icon.jade
 
+mixin leftArrow
+  +icon('down-arrow', 'carousel-icons rotate90 stroke-gray')
+
+mixin rightArrow
+  +icon('down-arrow', 'carousel-icons rotate-90 stroke-gray')
+
 doctype html
 html(lang='en')
   head
     include ../head.jade
     title=content.pageTitle
   body.page-home
-    .navbar.navbar-light.bg-primary
+    .navbar.navbar-light.bg-primary#top
       .navbar-brand
         +svg('marmalade-logo')
     .embed-responsive.embed-responsive-16by9
@@ -33,7 +39,8 @@ html(lang='en')
         br
         a(href=content.aboutLinkTarget)=content.aboutLink
         br
-        +icon('down-arrow', 'fill-gray stroke-gray m-t-1')
+        a(href=content.aboutLinkTarget)
+          +icon('down-arrow', 'fill-gray stroke-gray m-t-1')
 
     section.social.bg-primary
       .container.container-restrainer
@@ -53,21 +60,26 @@ html(lang='en')
         hr
         #clients-carousel.carousel.slide.m-y-1(data-ride='carousel' data-interval='9999999')
           .carousel-inner(role='listbox')
-            each client, i in content.clientsCarousel
-              .carousel-item(style="background-image: url(#{client});")
-                span.sr-only Client #{i + 1} 
+            each client, index in content.clientsCarousel
+              .carousel-item(class={active: index === 0} style="background-image: url(#{client});")
+                span.sr-only Client #{index + 1} 
           a.left.carousel-control(href='#clients-carousel' role='button' data-slide='prev')
-            +icon('left-arrow-grey', 'carousel-icons')
+            +leftArrow
             span.sr-only Previous client
           a.right.carousel-control(href='#clients-carousel' role='button' data-slide='next')
-            +icon('right-arrow-grey', 'carousel-icons')
+            +rightArrow
             span.sr-only Previous client
-        a(href=content.clientsLinkTarget)=content.clientsLink
-        br
-        a(href='#clients-fulllist' data-toggle='collapse' aria-expanded='false' aria-controls='clients-fulllist')
-          +icon('down-arrow', 'fill-gray stroke-gray m-t-1')
-        #clients-fulllist.collapse
-          p.m-t-1=content.clientsFullList
+          
+          ol.carousel-indicators
+            each item, index in content.clientsCarousel
+              li.carousel-indicator(data-target='#clients-carousel' data-slide-to='#{index}' class={active: index === 0})
+
+        //- a(href=content.clientsLinkTarget)=content.clientsLink
+        //- br
+        //- a(href='#clients-fulllist' data-toggle='collapse' aria-expanded='false' aria-controls='clients-fulllist')
+        //-   +icon('down-arrow', 'fill-gray stroke-gray m-t-1')
+        //- #clients-fulllist.collapse
+        //-   p.m-t-1=content.clientsFullList
 
     section#team.team
       .container.container-restrainer
@@ -75,8 +87,8 @@ html(lang='en')
         hr
         #team-carousel.carousel.slide.m-t-1(data-ride='carousel' data-interval='9999999')
           .carousel-inner(role='listbox')
-            each member in content.team
-              .carousel-item
+            each member, index in content.team
+              .carousel-item(class={active: index === 0})
                 .container
                   .row
                     .col-xs-12.col-md-7
@@ -93,14 +105,14 @@ html(lang='en')
                           a(href='mailto:#{member.email}') Email Me
                       
           a.left.carousel-control(href='#team-carousel' role='button' data-slide='prev')
-            +icon('left-arrow-grey', 'carousel-icons')
+            +leftArrow
             span.sr-only Previous client
           a.right.carousel-control(href='#team-carousel' role='button' data-slide='next')
-            +icon('right-arrow-grey', 'carousel-icons')
+            +rightArrow
             span.sr-only Previous client
           ol.carousel-indicators
-            each member, i in content.team
-              li.carousel-indicator(data-target='#team-carousel' data-slide-to='#{i}')
+            each item, index in content.team
+              li.carousel-indicator(data-target='#team-carousel' data-slide-to='#{index}' class={active: index === 0})
     section.services.bg-primary
       .container.container-restrainer
         h1.text-uppercase.rolodex-titlebar #{content.servicesH1}:&nbsp;#[span(id='rolodex-titlebar')]
@@ -113,13 +125,13 @@ html(lang='en')
                 li.list-inline-item.rolodex-item(data-dex-item='#{title}')
                   +icon(title)
           a.rolodex-control.left.bg-primary(href='#rolodex' role='button' data-dex='prev')
-            +icon('left-arrow-grey')
+            +leftArrow
           a.rolodex-control.right.bg-primary(href='#rolodex' role='button' data-dex='next')
-            +icon('right-arrow-grey')
+            +rightArrow
         .rolodex-content.m-y-3
           each service in content.services
             p.rolodex-content-item(data-dex-item='#{toSlug(service.title)}')=service.copy
-    
+
     section#contact.contact
       .container.container-restrainer
         .row.m-b-1
@@ -152,8 +164,8 @@ html(lang='en')
           .col-xs-12.text-center.hidden-sm-up
             +icon('up-arrow-grey')
           .col-xs-12.col-sm-6.text-sm-right.p-t-1
-            a(href='#video').text-decoration-none.back-to-top Back to the top
-              +icon('up-arrow-grey', 'hidden-sm-down')
+            a(href='.').text-decoration-none.back-to-top Back to the top
+              +icon('down-arrow', 'rotate180 stroke-gray')
 
     footer.text-xs-center.bg-primary
       p.p-y-1 

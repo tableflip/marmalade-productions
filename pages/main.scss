@@ -83,6 +83,15 @@ p {
 .stroke-gray {
   stroke: $brand-gray;
 }
+.rotate180 {
+  transform: rotate(180deg)
+}
+.rotate90 {
+  transform: rotate(90deg)
+}
+.rotate-90 {
+  transform: rotate(-90deg)
+}
 .svg-icon {
   vertical-align: middle;
   display: inline-block;
