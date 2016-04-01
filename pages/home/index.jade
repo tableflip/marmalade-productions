@@ -68,23 +68,39 @@ html(lang='en')
           +icon('down-arrow', 'fill-gray stroke-gray m-t-1')
         #clients-fulllist.collapse
           p.m-t-1=content.clientsFullList
-        
+
     section#team.team
       .container.container-restrainer
-        h1.text-uppercase=content.theteamH1
+        h1.text-uppercase=content.teamH1
         hr
-        .container.p-x-0
-          .row
-            .col-sm-5
-              img.img-fluid(src='#{content.theteamMugshot}' alt='#{content.theteamName}')
-            .col-sm-7.text-sm-left
-              p=content.theteamName
-              p=content.theteamCopy
-                br
-                a(href='mailto:#{content.theteamEmailLink}')=content.theteamEmail
-                br
-                a(href='tel:#{content.theteamPhone}')=content.theteamPhone
-
+        #team-carousel.carousel.slide.m-t-1(data-ride='carousel' data-interval='9999999')
+          .carousel-inner(role='listbox')
+            each member in content.team
+              .carousel-item
+                .container
+                  .row
+                    .col-xs-12.col-md-7
+                      .team-member-photo.m-b-1
+                        .photo-frame(style='background-image: url(#{member.mugshot})')
+                        span.label.label-default.role=member.role
+                        span.label.label-default.name=member.name.split(' ')[0]
+                    .col-xs-12.col-md-5
+                      ul.list-group.text-center.text-md-left
+                        li.list-group-item.hidden-sm-down=member.name
+                        li.list-group-item.hidden-sm-down=member.role
+                        li.list-group-item=member.phone
+                        li.list-group-item
+                          a(href='mailto:#{member.email}') Email Me
+                      
+          a.left.carousel-control(href='#team-carousel' role='button' data-slide='prev')
+            +icon('left-arrow-grey', 'carousel-icons')
+            span.sr-only Previous client
+          a.right.carousel-control(href='#team-carousel' role='button' data-slide='next')
+            +icon('right-arrow-grey', 'carousel-icons')
+            span.sr-only Previous client
+          ol.carousel-indicators
+            each member, i in content.team
+              li.carousel-indicator(data-target='#team-carousel' data-slide-to='#{i}')
     section.services.bg-primary
       .container.container-restrainer
         h1.text-uppercase.rolodex-titlebar #{content.servicesH1}:&nbsp;#[span(id='rolodex-titlebar')]
@@ -139,14 +155,9 @@ html(lang='en')
             a(href='#video').text-decoration-none.back-to-top Back to the top
               +icon('up-arrow-grey', 'hidden-sm-down')
 
-    footer.text-xs-center.bg-primary.p-y-1
-      ul.list-inline
-        li.list-inline-item &#169; 2016 Marmalade Productions
-        // pending page content from marmalade productions
-        //- li.list-inline-item
-        //-   a(href='/terms').text-decoration-none T&amp;Cs
-        //- li.list-inline-item
-        //-   a(href='/disclaimer').text-decoration-none Disclaimer
+    footer.text-xs-center.bg-primary
+      p.p-y-1 
+        small &#169; 2016 Marmalade Productions
 
     div.svg-bundle
       include ../bundle.svg

@@ -22,6 +22,32 @@
 	"clientsFullList": "Nasa - Bit of text about nasa and what it was like to go into space with them, FedEx, Starbucks, Ikea, and many more ...",
 	"clientsLink": "Full List of Clients",
 	"clientsLinkTarget": "#clients",
+	"teamH1": "Meet The Team",
+	"team": [
+		{
+			"name": "Stuart Everitt",
+			"role": "Director",
+			"mugshot": "http://www.phon.ucl.ac.uk/home/stuart/images/4473cropped20p.jpg",
+			"phone": "079448475753",
+			"email": "stu@marmaladeproductions.co.uk"
+		},
+		{
+			"name": "Susan Ribble",
+			"role": "Chief Editor",
+			"mugshot": "http://dl9fvu4r30qs1.cloudfront.net/49/1d/54c61eb041a0b60b695f69196109/sally-field-sxsw-2015-daniel-bergeron.jpg",
+			"phone": "079448677247",
+			"email": "susan@marmaladeproductions.co.uk"
+		},
+		{
+			"name": "Helen Ward",
+			"role": "Public Relations",
+			"mugshot": "https://s-media-cache-ak0.pinimg.com/236x/aa/c8/fb/aac8fb9bbfa5618f1a6ed81281c9ead3.jpg",
+			"phone": "079458676647",
+			"email": "helen@marmaladeproductions.co.uk"
+		}
+	],
+	"servicesH1": "Servies: The Brief",
+	"servicesCopy": "We'll work with you closely to fully understand your project requirements, from what you want to communicate to the style in which you'd like to do it. We'll then come up with a proposal, budget and time-frame that works for you.",
 	"theteamH1": "Meet the Team",
 	"theteamMugshot": "http://static2.stuff.co.nz/1402955351/725/10166725.jpg",
 	"theteamName": "Sherlock Holmes",

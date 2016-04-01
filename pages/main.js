@@ -1,12 +1,14 @@
 var $ = window.$ = window.jQuery = require('jquery')
 require('bootstrap/dist/js/umd/carousel.js')
 require('bootstrap/dist/js/umd/collapse.js')
+require('./rolodex.js')()
 
-var rolodex = require('./rolodex.js')
-$('.carousel-item').first().addClass('active')
+$('#clients-carousel .carousel-item').first().addClass('active')
 $('#clients-carousel').carousel()
+$('#team-carousel .carousel-item').first().addClass('active')
+$('#team-carousel .carousel-indicator').first().addClass('active')
+$('#team-carousel').carousel()
 
-rolodex()
 $('#play').on('click', startVideo)
 $('body').on('click', stopVideo)
 
