@@ -7,16 +7,42 @@
   },
   "jumbotronLead": { "type": "textarea" },
   "jumbotronBg": { "type": "img" },
-  "aboutLead": { "type": "textarea" },
-  "aboutCopy": { "type": "textarea" },
-  "jumbotronBg": { "type": "img" },
+  "jumbotronVideo": { "type": "url" },
   "aboutLead": { "type": "textarea" },
   "aboutCopy": { "type": "textarea" },
   "clientsCarousel": { "type": "list" },
-  "clientsFullList": { "type": "textarea" },
-  "theteamMugshot": { "type": "img" },
-  "theteamCopy": { "type": "textarea" },
-  "services": { "type": "objectlist" },
+  "team": [{
+    "name": {
+      "type": "text",
+      "default": "Team member's name"
+    },
+    "role": {
+      "type": "text",
+      "default": "Role"
+    },
+    "mugshot": {
+      "type": "img",
+      "default": "http://placehold.it/350x350"
+    },
+    "phone": {
+      "type": "text",
+      "default": "07900000000"
+    },
+    "email": {
+      "type": "text",
+      "default": "an@email.address"
+    }
+  }],
+  "services": [{
+    "title": {
+      "type": "text",
+      "default": "Title"
+    },
+    "copy": {
+      "type": "textarea",
+      "default": "Add copy in here..."
+    }
+  }],
   "contactAddress": { "type": "textarea" },
   "contactLocation": { "type": "map" }
 }
