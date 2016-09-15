@@ -38,7 +38,7 @@
     "watch:html": "nodemon -w facts.json -w pages -e jade,json,svg -x npm run build:html",
     "watch:js": "watchify -t jadeify pages/main.js -o dist/bundle.js",
     "watch:svg": "nodemon -w svg -e svg -x npm run svg",
-    "watch:serve": "browser-sync start --files 'dist/bundle.*' --files 'dist/*.html' --server dist",
+    "watch:serve": "browser-sync start --files 'dist/bundle.*' --files 'dist/*.html' --server dist --port 4000",
     "deploy:next": "npm-run-all clean build && surge -p ./dist -d $npm_package_config_deploy_next",
     "deploy:prod": "npm-run-all clean build && surge -p ./dist -d $npm_package_config_deploy_prod"
   },

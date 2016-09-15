@@ -2,8 +2,8 @@
   "pageTitle": "Marmalade productions",
   "jumbotronH1": "Showreel",
   "jumbotronLead": "Play now",
-  "jumbotronBg": "https://i.vimeocdn.com/video/558404790.jpg?mw=1920&mh=1080&q=70",
-  "jumbotronVideo": "https://player.vimeo.com/video/157179553",
+  "jumbotronBg": "https://i.vimeocdn.com/video/152958657.jpg?mw=1920&mh=1080&q=70",
+  "jumbotronVideo": "https://player.vimeo.com/video/152958657",
   "aboutLead": "We're an independent film production company based in London.",
   "aboutCopy": "We produce high quality film and video content for a variety of high end clients and independent organisations, from brand and product footage, to interviews and documentaries.",
   "aboutLink": "Meet the team",
@@ -13,11 +13,27 @@
   "socialLinkTarget": "https://twitter.com/i/notifications",
   "clientsH1": "Our Clients",
   "clientsCarousel": [
-    "http://sbifinishing.com/wordpress/wp-content/uploads/2012/12/Logo-no-background.png",
-    "http://tutorial9.s3.amazonaws.com/uploads/2008/12/logo.png",
-    "http://wiki.myexperiment.org/images/MyExperiment_logo_5016x960_trans.png",
-    "http://www.masonbruce.com/wp-content/uploads/2015/03/android-logo-transparent-background.png",
-    "http://www.lunapic.com/editor/premade/transparent.gif"
+    "/client-logos/avon.svg",
+    "/client-logos/baa.svg",
+    "/client-logos/bbc.svg",
+    "/client-logos/brands-2-life.svg",
+    "/client-logos/british-gypsum.svg",
+    "/client-logos/carbon-trust.svg",
+    "/client-logos/grazia.svg",
+    "/client-logos/herald-tribune.svg",
+    "/client-logos/itn.svg",
+    "/client-logos/kpmg.svg",
+    "/client-logos/lambeth-council.svg",
+    "/client-logos/loreal.svg",
+    "/client-logos/mac.svg",
+    "/client-logos/marks-and-spencer.svg",
+    "/client-logos/mentos.svg",
+    "/client-logos/natiral-history-museum.svg",
+    "/client-logos/new-york-times.svg",
+    "/client-logos/royal-air-force.svg",
+    "/client-logos/screwfix.svg",
+    "/client-logos/sky.svg",
+    "/client-logos/vogue.svg"
   ],
   "clientsFullList": "Nasa - Bit of text about nasa and what it was like to go into space with them, FedEx, Starbucks, Ikea, and many more ...",
   "clientsLink": "Full List of Clients",
@@ -27,21 +43,14 @@
     {
       "name": "Stuart Everitt",
       "role": "Director",
-      "mugshot": "http://www.phon.ucl.ac.uk/home/stuart/images/4473cropped20p.jpg",
+      "mugshot": "/images/stu.jpg",
       "phone": "079448475753",
       "email": "stu@marmaladeproductions.co.uk"
     },
     {
-      "name": "Susan Ribble",
-      "role": "Chief Editor",
-      "mugshot": "http://dl9fvu4r30qs1.cloudfront.net/49/1d/54c61eb041a0b60b695f69196109/sally-field-sxsw-2015-daniel-bergeron.jpg",
-      "phone": "079448677247",
-      "email": "susan@marmaladeproductions.co.uk"
-    },
-    {
       "name": "Helen Ward",
       "role": "Public Relations",
-      "mugshot": "https://s-media-cache-ak0.pinimg.com/236x/aa/c8/fb/aac8fb9bbfa5618f1a6ed81281c9ead3.jpg",
+      "mugshot": "/images/helen.jpg",
       "phone": "079458676647",
       "email": "helen@marmaladeproductions.co.uk"
     }
