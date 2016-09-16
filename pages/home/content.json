@@ -1,11 +1,11 @@
 {
-  "pageTitle": "Marmalade productions",
+  "pageTitle": "Marmalade Productions",
   "jumbotronH1": "Showreel",
   "jumbotronLead": "Play now",
-  "jumbotronBg": "https://i.vimeocdn.com/video/152958657.jpg?mw=1920&mh=1080&q=70",
-  "jumbotronVideo": "https://player.vimeo.com/video/152958657",
-  "aboutLead": "We're an independent film production company based in London.",
-  "aboutCopy": "We produce high quality film and video content for a variety of high end clients and independent organisations, from brand and product footage, to interviews and documentaries.",
+  "jumbotronBg": "https://ucarecdn.com/2feb5577-d0c5-461a-bb68-480ef3a6c3eb/",
+  "jumbotronVideo": "https://vimeo.com/152971654",
+  "aboutLead": "We're an independent film production company based in London\n",
+  "aboutCopy": "We produce high quality film and video content for high end clients and independent organisations. \nFrom brand and product footage, to interviews, dramas and documentaries.",
   "aboutLink": "Meet the team",
   "aboutLinkTarget": "#team",
   "socialH1": "Latest tweet",
@@ -13,29 +13,30 @@
   "socialLinkTarget": "https://twitter.com/i/notifications",
   "clientsH1": "Our Clients",
   "clientsCarousel": [
-    "/client-logos/avon.svg",
-    "/client-logos/baa.svg",
-    "/client-logos/bbc.svg",
-    "/client-logos/brands-2-life.svg",
-    "/client-logos/british-gypsum.svg",
-    "/client-logos/carbon-trust.svg",
-    "/client-logos/grazia.svg",
-    "/client-logos/herald-tribune.svg",
-    "/client-logos/itn.svg",
-    "/client-logos/kpmg.svg",
-    "/client-logos/lambeth-council.svg",
-    "/client-logos/loreal.svg",
-    "/client-logos/mac.svg",
-    "/client-logos/marks-and-spencer.svg",
-    "/client-logos/mentos.svg",
-    "/client-logos/natiral-history-museum.svg",
-    "/client-logos/new-york-times.svg",
-    "/client-logos/royal-air-force.svg",
-    "/client-logos/screwfix.svg",
-    "/client-logos/sky.svg",
-    "/client-logos/vogue.svg"
+    "http://tableflip.github.io/marmalade-productions/client-logos/sky.svg",
+    "http://tableflip.github.io/marmalade-productions/client-logos/avon.svg",
+    "http://tableflip.github.io/marmalade-productions/client-logos/bbc.svg",
+    "http://tableflip.github.io/marmalade-productions/client-logos/baa.svg",
+    "http://tableflip.github.io/marmalade-productions/client-logos/brands-2-life.svg",
+    "http://tableflip.github.io/marmalade-productions/client-logos/british-gypsum.svg",
+    "http://tableflip.github.io/marmalade-productions/client-logos/carbon-trust.svg",
+    "http://tableflip.github.io/marmalade-productions/client-logos/grazia.svg",
+    "http://tableflip.github.io/marmalade-productions/client-logos/herald-tribune.svg",
+    "http://tableflip.github.io/marmalade-productions/client-logos/itn.svg",
+    "http://tableflip.github.io/marmalade-productions/client-logos/kpmg.svg",
+    "http://tableflip.github.io/marmalade-productions/client-logos/lambeth-council.svg",
+    "http://tableflip.github.io/marmalade-productions/client-logos/loreal.svg",
+    "http://tableflip.github.io/marmalade-productions/client-logos/mac.svg",
+    "http://tableflip.github.io/marmalade-productions/client-logos/marks-and-spencer.svg",
+    "http://tableflip.github.io/marmalade-productions/client-logos/mccann.svg",
+    "http://tableflip.github.io/marmalade-productions/client-logos/mentos.svg",
+    "http://tableflip.github.io/marmalade-productions/client-logos/natural-history-museum.svg",
+    "http://tableflip.github.io/marmalade-productions/client-logos/new-york-times.svg",
+    "http://tableflip.github.io/marmalade-productions/client-logos/royal-air-force.svg",
+    "http://tableflip.github.io/marmalade-productions/client-logos/screwfix.svg",
+    "http://tableflip.github.io/marmalade-productions/client-logos/vogue.svg"
   ],
-  "clientsFullList": "Nasa - Bit of text about nasa and what it was like to go into space with them, FedEx, Starbucks, Ikea, and many more ...",
+  "clientsFullList": "We work with clients around the world. From Vogue, Swarovski and the Natural History Museum to Sri Lanka Tourism and the BBC.",
   "clientsLink": "Full List of Clients",
   "clientsLinkTarget": "#clients",
   "teamH1": "Meet The Team",
@@ -43,41 +44,62 @@
     {
       "name": "Stuart Everitt",
       "role": "Director",
-      "mugshot": "/images/stu.jpg",
-      "phone": "079448475753",
-      "email": "stu@marmaladeproductions.co.uk"
+      "mugshot": "https://ucarecdn.com/f57574bb-43f3-421c-a261-ed3d25a4b67d/",
+      "phone": "07739930250",
+      "email": "stuart@marmalade-productions.co.uk"
     },
     {
       "name": "Helen Ward",
       "role": "Public Relations",
-      "mugshot": "/images/helen.jpg",
+      "mugshot": "https://ucarecdn.com/2034e809-8d33-4fe3-8370-87677d0480df/",
       "phone": "079458676647",
-      "email": "helen@marmaladeproductions.co.uk"
+      "email": "helen@marmalade-productions.co.uk"
+    },
+    {
+      "name": "Adam Loretz",
+      "role": "Producer & Cameraman",
+      "mugshot": "http://placehold.it/350x350",
+      "phone": "07900000000",
+      "email": "adam@marmalade-productions.co.uk"
+    },
+    {
+      "name": "Sally Meeson",
+      "role": "Senior Producer and Editor",
+      "mugshot": "http://placehold.it/350x350",
+      "phone": "07900000000",
+      "email": "an@email.address"
+    },
+    {
+      "name": "Liam Cobb",
+      "role": "Storyboard artist",
+      "mugshot": "http://placehold.it/350x350",
+      "phone": "07900000000",
+      "email": "an@email.address"
     }
   ],
   "servicesH1": "Services",
   "services": [
     {
-      "title": "Brief",
+      "title": "The Brief",
       "copy": "We'll work with you closely to fully understand your project requirements, from what you want to communicate to the style in which you'd like to do it. We'll then come up with a proposal, budget and time-frame that works for you."
     },
     {
       "title": "Pre Production",
-      "copy": "Pre-Production this is when things get exciting as you'll be involved in rehersals and costum fitting and makeup trials."
+      "copy": "This is when things get exciting: you'll be involved in scripting, rehearsals and costume fitting, make-up trials and cinematography testing."
     },
     {
       "title": "The Shoot",
-      "copy": "The Shoot - often the most stressful part of film makeing, we are up against the clock and at the mercy of the elements. However this is where the magic happens and somethings, when things come together it is like watching gods hands at play."
+      "copy": "Often the most fun part of film making. We are up against the clock and at the mercy of the elements, however this is where the magic happens. And sometimes, when things come together, it is like watching god's hands at play."
     },
     {
       "title": "Post Production",
-      "copy": "Post production, the editing is the actual crafting of your film, assembing sound and video to create a moving experience that can be shared with countless people."
+      "copy": "The editing is actually the crafting of your film. Assembling sound and video, then grading and colouring to create a moving experience that can be shared with countless people."
     }
   ],
   "contactH1": "Contact Us",
-  "contactAddress": "**Maramlade Productions**\nUnit 1a JAILmake\nEast Dulwich Road\nLondon\nSE22 9BA",
+  "contactAddress": "**Marmalade Productions**\nUnit 1a JAILmake\nEast Dulwich Road\nLondon\nSE22 9BA",
   "contactEmail": "email us",
-  "contactEmailLink": "film@marmalade-productions.com",
+  "contactEmailLink": "stuart@marmalade-productions.com",
   "contactPhone": "02067883673",
   "contactLocation": [
     51.46209274899036,
