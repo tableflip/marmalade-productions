@@ -13,8 +13,9 @@
   "socialLinkTarget": "https://twitter.com/i/notifications",
   "clientsH1": "Our Clients",
   "clientsCarousel": [
-    "/client-logos/avon.svg",
-    "http://tableflip.github.io/marmalade-productions/client-logos/sky.svg"
+    "http://tableflip.github.io/marmalade-productions/client-logos/sky.svg",
+    "http://tableflip.github.io/marmalade-productions/client-logos/avon.svg",
+    "http://tableflip.github.io/marmalade-productions/client-logos/bbc.svg"
   ],
   "clientsFullList": "Nasa - Bit of text about nasa and what it was like to go into space with them, FedEx, Starbucks, Ikea, and many more ...",
   "clientsLink": "Full List of Clients",
