@@ -42,6 +42,13 @@
       "mugshot": "http://placehold.it/350x350",
       "phone": "07900000000",
       "email": "adam@marmalade-productions.co.uk"
+    },
+    {
+      "name": "Team member's name",
+      "role": "Role",
+      "mugshot": "http://placehold.it/350x350",
+      "phone": "07900000000",
+      "email": "an@email.address"
     }
   ],
   "servicesH1": "Services",
