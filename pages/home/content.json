@@ -36,7 +36,7 @@
     "http://tableflip.github.io/marmalade-productions/client-logos/screwfix.svg",
     "http://tableflip.github.io/marmalade-productions/client-logos/vogue.svg"
   ],
-  "clientsFullList": "We work with clients around the world. From Vogue, Swarovski and the Natural History Museum to Sri Lanka Tourism and the BBC.",
+  "clientsFullList": "We work with clients around the world. From Vogue, Swarovski and the Natural History Museum to The New York Times and the BBC.",
   "clientsLink": "Full List of Clients",
   "clientsLinkTarget": "#clients",
   "teamH1": "Meet The Team",
@@ -65,7 +65,7 @@
     {
       "name": "Sally Meeson",
       "role": "Senior Producer and Editor",
-      "mugshot": "http://placehold.it/350x350",
+      "mugshot": "https://ucarecdn.com/53448046-c7ff-4797-810e-e86b79552474/",
       "phone": "07900000000",
       "email": "an@email.address"
     },
