@@ -2085,6 +2085,8 @@ a.bg-danger:focus, a.bg-danger:hover { background-color: #c9302c; }
 
 @media print { .hidden-print { display: none !important; } }
 
+html, body { background-color: #f5e274; }
+
 body { letter-spacing: 1px; color: #222; text-align: center; }
 
 hr { height: 8px; border: 0; background: url('data:image/svg+xml;uft8,<svg width="37" height="8" viewBox="0 0 37 8" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><ellipse cx="4" cy="4" rx="4" ry="4"/><ellipse cx="18.4" cy="4" rx="4" ry="4"/><ellipse cx="32.8" cy="4" rx="4" ry="4"/></g></svg>') no-repeat center center; }
@@ -2092,6 +2094,8 @@ hr { height: 8px; border: 0; background: url('data:image/svg+xml;uft8,<svg width
 hr.left { background-position: left center; }
 
 p { margin: 0 auto; }
+
+.bg-white { background-color: white !important; }
 
 .bg-primary { color: #373a3c !important; }
 
