@@ -31,7 +31,7 @@ html(lang='en')
       p
         a.btn.btn-link.grey-light.text-decoration-none(href='#contact') Contact us
 
-    section.about
+    section.about.bg-white
       .container.container-restrainer
         p.display-1.font-feature.m-t-2.m-b-0=content.aboutLead
         hr
@@ -81,7 +81,7 @@ html(lang='en')
         //- #clients-fulllist.collapse
         //-   p.m-t-1=content.clientsFullList
 
-    section#team.team
+    section#team.team.bg-white
       .container.container-restrainer
         h1.text-uppercase=content.teamH1
         hr
@@ -132,7 +132,7 @@ html(lang='en')
           each service in content.services
             p.rolodex-content-item(data-dex-item='#{toSlug(service.title)}')=service.copy
 
-    section#contact.contact
+    section#contact.contact.bg-white
       .container.container-restrainer
         .row.m-b-1
           .col-sm-5
@@ -156,11 +156,14 @@ html(lang='en')
           .col-xs-12.col-sm-6.text-sm-left
             ul.list-inline
               li.list-inline-item
-                +icon('facebook-button')
+                a(href='https://www.facebook.com/Marmalade-Productions-219151481442169/' target='_blank')
+                  +icon('facebook-button')
               li.list-inline-item
-                +icon('twitter-button')
+                a(href='https://twitter.com/marmaladestu' target='_blank')
+                  +icon('twitter-button')
               li.list-inline-item
-                +icon('vimeo-button')
+                a(href='https://vimeo.com/marmalade' target='_blank')
+                  +icon('vimeo-button')
           .col-xs-12.text-center.hidden-sm-up
             +icon('up-arrow-grey')
           .col-xs-12.col-sm-6.text-sm-right.p-t-1
