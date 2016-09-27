@@ -68,6 +68,13 @@
       "mugshot": "https://ucarecdn.com/0aa64339-a418-4c9b-972b-bfb5fa727f2d/",
       "phone": "",
       "email": "adam@marmalade-productions.co.uk"
+    },
+    {
+      "name": "Team member's name",
+      "role": "Role",
+      "mugshot": "http://placehold.it/350x350",
+      "phone": "07900000000",
+      "email": "an@email.address"
     }
   ],
   "servicesH1": "Services",
