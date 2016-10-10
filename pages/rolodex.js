@@ -4,8 +4,8 @@ module.exports = function () {
   var itemWidth = $('.rolodex-item').first().width()
   var animating = false
 
-  $('[data-dex="prev"]').on('click', slide.bind(null, '<--'))
-  $('[data-dex="next"]').on('click', slide.bind(null, '-->'))
+  $('[data-dex="left"]').on('click', slide.bind(null, '<--'))
+  $('[data-dex="right"]').on('click', slide.bind(null, '-->'))
 
   initialRender()
 

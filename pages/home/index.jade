@@ -124,9 +124,9 @@ html(lang='en')
                 -var title = toSlug(service.title)
                 li.list-inline-item.rolodex-item(data-dex-item='#{title}')
                   +icon(title)
-          a.rolodex-control.left.bg-primary(href='#rolodex' role='button' data-dex='prev')
+          a.rolodex-control.left.bg-primary(href='#rolodex' role='button' data-dex='left')
             +leftArrow
-          a.rolodex-control.right.bg-primary(href='#rolodex' role='button' data-dex='next')
+          a.rolodex-control.right.bg-primary(href='#rolodex' role='button' data-dex='right')
             +rightArrow
         .rolodex-content.m-y-3
           each service in content.services
