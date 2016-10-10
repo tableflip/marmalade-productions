@@ -3,9 +3,9 @@
   "jumbotronH1": "Showreel",
   "jumbotronLead": "Play now",
   "jumbotronBg": "https://ucarecdn.com/2feb5577-d0c5-461a-bb68-480ef3a6c3eb/",
-  "jumbotronVideo": "https://player.vimeo.com/video/183002068",
+  "jumbotronVideo": "https://player.vimeo.com/external/184691413.hd.mp4?s=e145f801bd0baf662c057971d9a52bd9ed520f95&profile_id=174",
   "aboutLead": "We're an independent film production company based in London\n",
-  "aboutCopy": "We produce high quality film and video content for high end clients and independent organisations. \nFrom brand and product footage, to interviews, dramas and documentaries.",
+  "aboutCopy": "We produce high quality film and video content for high end clients and organisations. \nFrom commercials and branded content, to interviews, dramas and documentaries.",
   "aboutLink": "Meet the team",
   "aboutLinkTarget": "#team",
   "socialH1": "Latest tweet",
@@ -43,24 +43,45 @@
   "team": [
     {
       "name": "Stuart Everitt",
-      "role": "Director",
+      "role": "Creative Director",
       "mugshot": "https://ucarecdn.com/f57574bb-43f3-421c-a261-ed3d25a4b67d/",
-      "phone": "07739930250",
+      "phone": "07739 930250",
       "email": "stuart@marmalade-productions.co.uk"
     },
     {
       "name": "Helen Ward",
-      "role": "Public Relations",
+      "role": "Production Administrator",
       "mugshot": "https://ucarecdn.com/2034e809-8d33-4fe3-8370-87677d0480df/",
-      "phone": "079458676647",
+      "phone": "07828 624829",
       "email": "helen@marmalade-productions.co.uk"
     },
     {
       "name": "Sally Meeson",
-      "role": "Senior Producer and Editor",
+      "role": "Senior Producer",
       "mugshot": "https://ucarecdn.com/b180a833-a935-4350-9375-e862061b501e/",
-      "phone": "07900000000",
-      "email": "an@email.address"
+      "phone": "",
+      "email": "sally@marmalade-productions.co.uk"
+    },
+    {
+      "name": "Adam Loretz",
+      "role": "Cameraman",
+      "mugshot": "https://ucarecdn.com/0aa64339-a418-4c9b-972b-bfb5fa727f2d/",
+      "phone": "",
+      "email": "adam@marmalade-productions.co.uk"
+    },
+    {
+      "name": "Katie Olds",
+      "role": "Senior Producer",
+      "mugshot": "https://ucarecdn.com/880dfff9-f3b9-417e-9608-2c0ccb2935bd/",
+      "phone": "",
+      "email": ""
+    },
+    {
+      "name": "Aoife Twomey",
+      "role": "Senior Producer",
+      "mugshot": "https://ucarecdn.com/6166fddf-1d3e-4e20-9f58-e534d394c4af/",
+      "phone": "",
+      "email": ""
     }
   ],
   "servicesH1": "Services",
@@ -86,7 +107,7 @@
   "contactAddress": "**Marmalade Productions**\nUnit 1a JAILmake\nEast Dulwich Road\nLondon\nSE22 9BA",
   "contactEmail": "email us",
   "contactEmailLink": "stuart@marmalade-productions.com",
-  "contactPhone": "02067883673",
+  "contactPhone": "0206 788 3673",
   "contactLocation": [
     51.46209274899036,
     -0.06719057068039547
