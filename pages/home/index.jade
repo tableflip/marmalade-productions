@@ -16,7 +16,7 @@ html(lang='en')
       .navbar-brand
         +svg('marmalade-logo')
     .embed-responsive.embed-responsive-16by9
-      iframe#video.embed-responsive-item(src='#{content.jumbotronVideo}?api=1' webkitallowfullscreen mozallowfullscreen allowfullscreen)
+      iframe#video.embed-responsive-item(src='#{content.jumbotronVideo}&api=1' webkitallowfullscreen mozallowfullscreen allowfullscreen)
       .container-lead.vert-center.jumbotron.bg-inverse.embed-responsive-item(style="background: url(#{content.jumbotronBg}); background-size:cover;")
         .vert-center-item
           h1.font-feature=content.jumbotronH1
@@ -74,13 +74,6 @@ html(lang='en')
             each item, index in content.clientsCarousel
               li.carousel-indicator(data-target='#clients-carousel' data-slide-to='#{index}' class={active: index === 0})
 
-        //- a(href=content.clientsLinkTarget)=content.clientsLink
-        //- br
-        //- a(href='#clients-fulllist' data-toggle='collapse' aria-expanded='false' aria-controls='clients-fulllist')
-        //-   +icon('down-arrow', 'fill-gray stroke-gray m-t-1')
-        //- #clients-fulllist.collapse
-        //-   p.m-t-1=content.clientsFullList
-
     section#team.team.bg-white
       .container.container-restrainer
         h1.text-uppercase=content.teamH1
@@ -96,7 +89,7 @@ html(lang='en')
                         .photo-frame(style='background-image: url(#{member.mugshot})')
                         span.label.label-default.role=member.role
                         span.label.label-default.name=member.name.split(' ')[0]
-                    .col-xs-12.col-md-5
+                    .col-xs-12.col-md-5.p-l-0
                       ul.list-group.text-center.text-md-left
                         li.list-group-item.hidden-sm-down=member.name
                         li.list-group-item.hidden-sm-down=member.role

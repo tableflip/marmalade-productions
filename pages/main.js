@@ -3,6 +3,8 @@ require('bootstrap/dist/js/umd/carousel.js')
 require('bootstrap/dist/js/umd/collapse.js')
 require('./rolodex.js')()
 
+player('unload')
+
 $('#play').on('click', startVideo)
 $('body').on('click', stopVideo)
 
