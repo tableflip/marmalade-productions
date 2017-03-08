@@ -104,12 +104,12 @@
     }
   ],
   "contactH1": "Contact Us",
-  "contactAddress": "**Marmalade Productions**\nUnit 1a JAILmake\nEast Dulwich Road\nLondon\nSE22 9BA",
+  "contactAddress": "**Marmalade Productions**\n36 Dunstans Rd\nLondon\nSE22 0HQ",
   "contactEmail": "email us",
   "contactEmailLink": "stuart@marmalade-productions.com",
   "contactPhone": "0208 088 2436",
   "contactLocation": [
-    51.46209274899036,
-    -0.06719057068039547
+    51.4529611,
+    -0.0658407
   ]
 }
