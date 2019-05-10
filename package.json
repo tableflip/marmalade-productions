@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "autoprefixer": "^6.0.3",
-    "bootstrap": "^4.0.0-alpha.2",
+    "bootstrap": "4.0.0-alpha.2",
     "browserify": "^11.2.0",
     "find": "^0.2.4",
     "jade": "^1.11.0",
